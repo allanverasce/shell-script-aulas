@@ -31,7 +31,7 @@ Nesta aula, você vai criar seu primeiro script em Shell e aprender como execut�
 Agora, você pode executar seu script seguindo uma das formas de comando,:
 
    ```bash
-   ./hello_world.sh Ou 
+   ./hello_world.sh  
    bash hello_world.sh
 
-Isso imprimirá a mensagem "Olá, Mundo!" no terminal.
+   Isso imprimirá a mensagem "Olá, Mundo!" no terminal.
