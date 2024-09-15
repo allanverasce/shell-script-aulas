@@ -63,3 +63,13 @@ Exemplo:
 ```
 claer
 ```
+10. chmod : Este comando é utilizado para alterar as permissões de um arquivo ou diretório. As permissões básicas que um arquivo pode ter são:
+- r (read)
+- w (write)
+- x (execute)
+
+Exemplo:
+```
+chmod +x SeuScript.sh
+```
+    
