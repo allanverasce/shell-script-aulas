@@ -14,6 +14,11 @@ Exemplo:
 ```
 cd /home/user/
 ```
+Temos outros usos do comando cd. Caso queira sair do diretório corrente, basta usar o commando.
+```
+cd ..
+```
+
 
 3. mkdir: Cria um novo diretório.
 
@@ -51,4 +56,10 @@ mv arquivo.txt /home/user/documentos/
 Exemplo:
 ```
 pwd
+```
+9. clear: limpa a tela (mesma coisa de usar CLS no DOS)
+
+Exemplo:
+```
+claer
 ```
