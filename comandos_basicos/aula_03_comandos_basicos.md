@@ -5,6 +5,7 @@ ls: Lista os arquivos e diretórios no diretório atual.
 Exemplo:
   ```
   ls
+  ```
 
 cd: Altera o diretório atual.
 
