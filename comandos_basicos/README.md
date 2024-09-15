@@ -10,23 +10,23 @@ Este módulo foi criado para ensinar aos alunos os comandos essenciais para inte
 ### Comandos Básicos
 Nesta seção, você será introduzido aos comandos fundamentais que todo usuário de Linux deve conhecer. Alguns exemplos de comandos básicos que serão abordados incluem:
 
-- **ls: Lista os arquivos e diretórios no diretório atual.
-- **cd: Muda o diretório atual.
-- **mkdir: Cria novos diretórios.
-- **rm: Remove arquivos e diretórios.
-- **cp: Copia arquivos ou diretórios.
-- **mv: Move ou renomeia arquivos ou diretórios.
-- **cat: Exibe o conteúdo de arquivos de texto.
+- ls: Lista os arquivos e diretórios no diretório atual.
+- cd: Muda o diretório atual.
+- mkdir: Cria novos diretórios.
+- rm: Remove arquivos e diretórios.
+- cp: Copia arquivos ou diretórios.
+- mv: Move ou renomeia arquivos ou diretórios.
+- cat: Exibe o conteúdo de arquivos de texto.
 Esses comandos formam a base para operar e gerenciar arquivos em um sistema Linux.
 
 ### Comandos Avançados
 Depois de aprender os comandos básicos, exploraremos comandos avançados que permitem fazer buscas e manipulações mais complexas de dados e arquivos. Comandos como:
 
-- **grep: Para buscar padrões dentro de arquivos de texto.
-- **awk: Para processar e manipular dados em colunas.
-- **sed: Para editar arquivos de texto automaticamente.
-- **find: Para localizar arquivos e diretórios com base em condições específicas.
-- **xargs: Para executar comandos a partir da saída de outro comando.
+- grep: Para buscar padrões dentro de arquivos de texto.
+- awk: Para processar e manipular dados em colunas.
+- sed: Para editar arquivos de texto automaticamente.
+- find: Para localizar arquivos e diretórios com base em condições específicas.
+- xargs: Para executar comandos a partir da saída de outro comando.
 Além disso, veremos como combinar comandos com pipes (|) e redirecionar saídas com >e>>`, permitindo criar fluxos de trabalho mais eficientes e personalizáveis.
 
 ### Exemplos e Práticas
