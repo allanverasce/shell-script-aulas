@@ -23,7 +23,6 @@ Nesta aula, você vai criar seu primeiro script em Shell e aprender como execut�
 
 ## Passo 3: Dando Permissão de Execução
    Para poder executar o script, precisamos garantir que ele tenha permissão de execução. No terminal, execute o seguinte comando:
-   
     ```
     chmod +x hello_world.sh
     ```
