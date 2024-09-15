@@ -11,7 +11,7 @@ Nesta aula, você vai criar seu primeiro script em Shell e aprender como execut�
    nano hello_world.sh
 
 2. Dentro do editor de texto, adicione o seguinte código:
-   ```bash
+   ```
    #!/bin/bash
    echo "Olá, Mundo!"
 
@@ -24,7 +24,7 @@ Nesta aula, você vai criar seu primeiro script em Shell e aprender como execut�
 ## Passo 3: Dando Permissão de Execução
    Para poder executar o script, precisamos garantir que ele tenha permissão de execução. No terminal, execute o seguinte comando:
    
-     ```bash
+     ```
     chmod +x hello_world.sh
 
 ## Passo 4: Executando o Script
