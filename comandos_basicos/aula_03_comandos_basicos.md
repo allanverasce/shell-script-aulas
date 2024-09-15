@@ -63,7 +63,9 @@ Exemplo:
 ```
 claer
 ```
-10. chmod : Este comando é utilizado para alterar as permissões de um arquivo ou diretório. As permissões no Linux são categorizadas em : permissões de dono do arquivo (usuário, representado pela letra u), permissões de grupo, usuários que são membros do mesmo grupo do arquivo (g), e por fim, permissões de usuários que não membros do grupo do arquivo (o).
+10. chmod : Este comando é utilizado para alterar as permissões de um arquivo ou diretório.
+<p align="justify">As permissões no Linux são categorizadas em : permissões de dono do arquivo (usuário, representado pela letra u), permissões de grupo, usuários que são membros do mesmo grupo do arquivo (g), e por fim, permissões de usuários que não membros do grupo do arquivo (o).</p>
+  
 Veja o exemplo, usando o comando ls -lha, para ver detalhes sobre o arquivo:
 #### -rw-r--r-- 1 allan allan 13 set 15 18:30 cat_create
 
