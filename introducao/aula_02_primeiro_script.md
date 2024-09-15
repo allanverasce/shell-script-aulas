@@ -26,6 +26,7 @@ Nesta aula, você vai criar seu primeiro script em Shell e aprender como execut�
    
     ```
     chmod +x hello_world.sh
+    ```
 
 ## Passo 4: Executando o Script
 Agora, você pode executar seu script seguindo uma das formas de comando,:
