@@ -33,5 +33,6 @@ Agora, você pode executar seu script seguindo uma das formas de comando,:
    ```bash
    ./hello_world.sh  
    bash hello_world.sh
+   ```
 
    Isso imprimirá a mensagem "Olá, Mundo!" no terminal.
