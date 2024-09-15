@@ -10,6 +10,13 @@ Exemplo:
 cd: Altera o diretório atual.
 
 Exemplo:
-
+```
 cd /home/user/
+```
 
+mkdir: Cria um novo diretório.
+
+Exemplo:
+```
+mkdir projetos
+```
