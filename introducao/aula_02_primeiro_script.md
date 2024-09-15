@@ -11,7 +11,7 @@ Nesta aula, você vai criar seu primeiro script em Shell e aprender como execut�
    nano hello_world.sh
 
 2. Dentro do editor de texto, adicione o seguinte código:
-```bash
+   ```bash
    #!/bin/bash
    echo "Olá, Mundo!"
 
