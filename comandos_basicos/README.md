@@ -4,7 +4,7 @@
 <p align="justify"> Distribuições Linux são conhecidas pela sua flexibilidade e personalização, permitindo que os usuários escolham como interagir com o sistema. O Shell, particularmente o Bash, é a interface de linha de comando padrão em muitas distribuições, proporcionando uma maneira poderosa de controlar o sistema com comandos simples ou scripts automatizados.</p>
 
 ## Comandos Básicos e Avançados no Shell
-Este módulo foi criado para ensinar aos alunos os comandos essenciais para interagir com sistemas baseados em Linux através do Shell. Os comandos do Shell são ferramentas poderosas que permitem aos usuários navegar, manipular arquivos, automatizar tarefas e muito mais. Ao aprender esses comandos, você poderá realizar operações de forma rápida e eficiente diretamente do terminal, sem depender de interfaces gráficas.
+<p align="justify">Este módulo foi criado para ensinar aos alunos os comandos essenciais para interagir com sistemas baseados em Linux através do Shell. Os comandos do Shell são ferramentas poderosas que permitem aos usuários navegar, manipular arquivos, automatizar tarefas e muito mais. Ao aprender esses comandos, você poderá realizar operações de forma rápida e eficiente diretamente do terminal, sem depender de interfaces gráficas.</p>
 
 ## O que você vai aprender
 ### Comandos Básicos
