@@ -10,3 +10,13 @@ Nesta aula, você vai criar seu primeiro script em Shell e aprender como execut�
    ```bash
    nano hello_world.sh
 
+2. Dentro do editor de texto, adicione o seguinte código:
+```bash
+   #!/bin/bash
+   echo "Olá, Mundo!"
+
+- ** #!/bin/bash: Essa linha indica que o script deve ser interpretado pelo Bash.
+- ** echo: Este comando exibe a mensagem "Olá, Mundo!" no terminal.
+
+## Passo 2: Salvando e Saindo
+   Para salvar o arquivo no nano, pressione CTRL + O, depois ENTER, e então CTRL + X para sair.
