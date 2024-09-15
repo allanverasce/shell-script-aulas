@@ -1,7 +1,7 @@
 # Introdução ao Shell Script
 
 ## Objetivos do Módulo
-Neste módulo, você terá o primeiro contato com o Shell Script, uma ferramenta poderosa para automatizar tarefas no sistema operacional Linux. O curso será focado em aplicações práticas para a biologia, demonstrando como scripts podem agilizar o processamento de dados biológicos, como sequências de DNA, proteínas e grandes volumes de arquivos.
+<p align="justify">Neste módulo, você terá o primeiro contato com o Shell Script, uma ferramenta poderosa para automatizar tarefas no sistema operacional Linux. O curso será focado em aplicações práticas para a biologia, demonstrando como scripts podem agilizar o processamento de dados biológicos, como sequências de DNA, proteínas e grandes volumes de arquivos.</p>
 
 ## Tópicos Abordados
 1. O que é Shell e Shell Script?
