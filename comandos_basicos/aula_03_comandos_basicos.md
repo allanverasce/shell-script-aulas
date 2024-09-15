@@ -1,4 +1,5 @@
-Comandos básicos são aqueles necessários para operar em um sistema Linux e navegar por seus diretórios. Alguns exemplos:
+## Comandos básicos 
+São aqueles necessários para operar em um sistema Linux e navegar por seus diretórios. Alguns exemplos:
 
 1. ls: Lista os arquivos e diretórios no diretório atual.
 
