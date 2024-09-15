@@ -32,7 +32,8 @@ Agora, você pode executar seu script com o comando:
 
    ```bash
    ./hello_world.sh
-   ou
+
+OU
 
    ```bash
    bash hello_world.sh
