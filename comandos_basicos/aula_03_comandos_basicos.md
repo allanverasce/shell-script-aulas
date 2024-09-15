@@ -27,3 +27,27 @@ Exemplo:
 ```
 cat arquivo.txt
 ```
+5. rm: Remove um arquivo ou diretório.
+
+Exemplo:
+```
+rm arquivo.txt
+```
+6. cp: Copia arquivos ou diretórios.
+
+Exemplo:
+```
+cp arquivo.txt /home/user/documentos/
+```
+7. mv: Move ou renomeia arquivos ou diretórios.
+
+Exemplo:
+```
+mv arquivo.txt /home/user/documentos/
+```
+8. pwd: Mostra o diretório atual em que você está.
+
+Exemplo:
+```
+pwd
+```
