@@ -22,10 +22,10 @@ Nesta aula, você vai criar seu primeiro script em Shell e aprender como execut�
    Para salvar o arquivo no nano, pressione CTRL + O, depois ENTER, e então CTRL + X para sair.
 
 ## Passo 3: Dando Permissão de Execução
-   <p>Para poder executar o script, precisamos garantir que ele tenha permissão de execução. No terminal, execute o seguinte comando:</p>
-   ```bash
-   chmod +x hello_world.sh
-
+      Para poder executar o script, precisamos garantir que ele tenha permissão de execução. No terminal, execute o seguinte comando:
+      ```bash 
+        chmod +x hello_world.sh
+        
 ## Passo 4: Executando o Script
 Agora, você pode executar seu script com o comando:
 
