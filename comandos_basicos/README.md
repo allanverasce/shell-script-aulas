@@ -27,7 +27,7 @@ Depois de aprender os comandos básicos, exploraremos comandos avançados que pe
 - sed: Para editar arquivos de texto automaticamente.
 - find: Para localizar arquivos e diretórios com base em condições específicas.
 - xargs: Para executar comandos a partir da saída de outro comando.
-Além disso, veremos como combinar comandos com pipes (|) e redirecionar saídas com >e>>`, permitindo criar fluxos de trabalho mais eficientes e personalizáveis.
+Além disso, veremos como combinar comandos com pipes (|) e redirecionar saídas com `>` e `>>`, permitindo criar fluxos de trabalho mais eficientes e personalizáveis.
 
 ### Exemplos e Práticas
 Ao longo do módulo, você terá acesso a vários scripts de exemplo, que mostram como utilizar esses comandos em cenários do mundo real. Esses exemplos serão úteis para você aplicar o que aprendeu e praticar no seu próprio ambiente.
