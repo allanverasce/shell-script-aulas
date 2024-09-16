@@ -58,3 +58,21 @@ Exemplo:
 ```
 wget https://github.com/allanverasce/bpc/blob/main/doc/UserGuide.pdf
 ```
+11. df: Este comando é usado para obter informações sobre o uso do espaço em disco, ele exibe a informação em porcentagem e quilobyte (KB)
+
+Exemplo: Veja algumas opções com parâmetros
+```
+df -h
+df -m
+df -k
+df -T
+```
+12. du: Este comando exibe o espaço ocupado por determinado arquivo ou diretório
+
+```
+du /home/allan
+```
+Veja alguns parâmetros que pode utilizar:
+- -s oferece o tamanho total de uma pasta especificada.
+- -m fornece informações sobre pastas e arquivos em MB 
+- -h informa a data da última modificação das pastas e arquivos exibidos.
