@@ -33,7 +33,7 @@ contar_sequencias() {
 # Usando a função para contar sequências
 contar_sequencias "sequencias.fasta"
 ```
-# Dicas  do Allan para o uso de Funções:
+### Dicas  do Allan para o uso de Funções:
 - Use funções para evitar duplicação de código.
 - Nomeie suas funções de forma descritiva para facilitar a compreensão do script. Lembra quanto mais fácil melhor !!!
 - Sempre passe parâmetros para funções, se necessário, para torná-las mais versáteis.
