@@ -27,10 +27,10 @@ fi
 ```
 2. Comparação Numérica:
 
--eq: Verifica se dois números são iguais.
--ne: Verifica se dois números são diferentes.
--lt: Verifica se o primeiro número é menor que o segundo.
--gt: Verifica se o primeiro número é maior que o segundo.
+- -eq: Verifica se dois números são iguais.
+- -ne: Verifica se dois números são diferentes.
+- -lt: Verifica se o primeiro número é menor que o segundo.
+- -gt: Verifica se o primeiro número é maior que o segundo.
 
 Exemplo:
 
@@ -41,9 +41,9 @@ fi
 ```
 3. Testes em Arquivos:
 
--e: Verifica se o arquivo existe.
--f: Verifica se o arquivo existe e é regular.
--d: Verifica se o caminho é um diretório.
+- -e: Verifica se o arquivo existe.
+- -f: Verifica se o arquivo existe e é regular.
+- -d: Verifica se o caminho é um diretório.
 Exemplo:
 
 ```
@@ -53,8 +53,8 @@ fi
 ```
 4. Combinação de Testes:
 
--a: Operador lógico E (AND).
--o: Operador lógico OU (OR).
+- -a: Operador lógico E (AND).
+- -o: Operador lógico OU (OR).
 Exemplo:
 ```
 if [ "$var1" -gt 5 -a "$var2" -lt 10 ]; then
