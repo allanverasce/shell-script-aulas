@@ -106,3 +106,11 @@ Exemplo:
 tail long.txt
 tail -n 4 long.txt
 ```
+
+13. head: De forma complementar ao tail. o head exibe as primeiras linhas de um determinado arquivo.
+Exemplo:
+
+```
+head arquivo.txt
+head -n 5 arquivo.txt
+```
