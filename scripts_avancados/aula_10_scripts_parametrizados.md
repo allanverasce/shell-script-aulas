@@ -12,4 +12,14 @@ No Bash, os parâmetros são referenciados com `$1`, `$2`, etc., onde `$1` é o 
 echo "O primeiro parâmetro é: $1"
 echo "O segundo parâmetro é: $2"
 ```
+Exemplo Genérico de Script Parametrizado:
+
+```
+#!/bin/bash
+# Script que imprime uma mensagem personalizada
+nome=$1
+mensagem=$2
+
+echo "Olá, $nome! $mensagem"
+```
 
