@@ -73,6 +73,17 @@ df -T
 du /home/allan
 ```
 Veja alguns parâmetros que pode utilizar:
-- -s oferece o tamanho total de uma pasta especificada.
-- -m fornece informações sobre pastas e arquivos em MB 
-- -h informa a data da última modificação das pastas e arquivos exibidos.
+- -s exibe o tamanho total de uma pasta.
+- -m exibe as informações sobre pastas e arquivos na escala de MB 
+- -h exibe informações de data da última modificação das pastas e arquivos.
+
+13.diff: Este comando analisa e compara o conteúdo de dois arquivos linha por linha. Como resultado, ele exibe as linhas que não são comuns entre eles.
+
+```
+Sintaxe: diff [opção] arquivo1 arquivo2
+```
+Veja algumas opções de parâmetros:
+- -q exibe apenas se os arquivos são diferentes ou não. Contudo, não exibe quais as diferenças.
+- -i faz a análise sem observar a diferença entre letras maiúsculas e minúsculas.
+- -b ignora espaços em branco como possíveis diferenças a serem analisadas.
+
