@@ -1,3 +1,5 @@
+#Esse script copia todos os arquivos com a extensão .txt de um diretório específico para um diretório de backup.
+
 #!/bin/bash
 
 # Diretório de origem
