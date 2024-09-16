@@ -37,3 +37,19 @@ Exemplo:
 ls > arquivos.txt   # Sobrescreve o arquivo com a lista de arquivos
 ls >> arquivos.txt  # Anexa ao final do arquivo
 ```
+8. apt, yum: São exemplos de gerenciadores de intalação inteligentes. Eles servem também para atualizar e remover os softwares (pacotes). É importante, ressaltar que cada distribuição adota um próprio, estes ai são exemplos, no caso do apt é mais comum a distribuições que usam o Debian (Ubuntu, Linux Mint) como base.
+
+Exemplo:
+```
+sudo apt install gimp
+sudo yum install gimp
+```
+9. wc:  Este comando vem de “word count”, ele exibe o número de palavras em um arquivo de texto:
+Exemplo:
+```
+wc TranscriptRun.txt 
+52  256 3433 TranscriptRun.txt
+```
+O resultado é organizado desta forma: 52 (número de linhas) 256 (palavras) 3433 (tamanho em bytes) e por fim, nome do arquivo.
+
+10. 
