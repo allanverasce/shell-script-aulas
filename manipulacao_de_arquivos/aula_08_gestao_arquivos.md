@@ -9,12 +9,6 @@ A gestão de arquivos em Bash envolve comandos que permitem copiar, mover, renom
 - `rm`: Remove arquivos ou diretórios.
 - `ls`: Lista o conteúdo de diretórios.
 
+### Veja os exemplos utilizando os comandos...
 ---
 
-## Exemplo Genérico
-
-### Copiar Arquivo:
-
-```
-cp arquivo_origem.txt arquivo_destino.txt
-```
