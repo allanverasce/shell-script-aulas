@@ -122,9 +122,9 @@ Vamos pra explicação, fique atento:
 - Para cada gene, o script realiza uma busca no arquivo banco_de_dados_genes.txt usando o comando grep.
 - Se o gene não for encontrado, o script informa que o gene não está no banco de dados; caso contrário, ele exibe o resultado encontrado.
 
-### Vamos entender como funciona comparando eles?:
+### Vamos entender como funciona comparando eles?
 
 - for: Ideal para quando você conhece a quantidade de iterações antecipadamente, como percorrer uma lista ou intervalo de números.
 - while: Útil quando o número de iterações não é conhecido, e você precisa repetir uma ação enquanto uma condição específica for verdadeira.
 
-### Ficou mais claro? espero que sim. Então quando for utilizar qualquer uma destas estruturas pense nas características e faça sua escolha!
+#### Ficou mais claro?, eu espero que sim. Então quando for utilizar qualquer uma destas estruturas pense nas características e faça sua escolha!
