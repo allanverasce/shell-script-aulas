@@ -28,7 +28,7 @@ Você pode combinar comandos para processar sequências de forma mais complexa. 
 ```
 grep "^ATG" sequencia.txt | wc -l
 ```
-Vamos pra explicação do que esta linha esta fazendo:
+#### Vamos pra explicação do que esta linha esta fazendo:
 - grep "^ATG" filtra as linhas que começam com "ATG".
 - | wc -l conta quantas dessas linhas existem.
 
