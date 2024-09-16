@@ -11,6 +11,6 @@
 
 ## Estrutura do Módulo
 - `aula_01_o_que_e_shell.md`: Introdução ao conceito de Shell e Shell Script.
-- `**aula_02_primeiro_script.md`: Criando seu primeiro script "Olá, Mundo!".
+- `aula_02_primeiro_script.md`: Criando seu primeiro script "Olá, Mundo!".
 - `/exemplos/`: Scripts de exemplo que serão usados ao longo das aulas.
 
