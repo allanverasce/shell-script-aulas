@@ -22,4 +22,35 @@ mensagem=$2
 
 echo "Olá, $nome! $mensagem"
 ```
+Veja como usar no terminal ...
+
+```
+./meu_script.sh Maria "Bem-vinda ao nosso sistema"
+```
+
+## Exemplo aplicado a Biologia
+Aqui está um exemplo onde um script recebe como parâmetros o nome de um arquivo FASTA e o nome de um banco de dados para realizar uma análise BLAST.
+
+```
+#!/bin/bash
+
+# Verifica se dois parâmetros foram passados
+if [ "$#" -ne 2 ]; then
+  echo "Uso: $0 <arquivo_fasta> <banco_dados>"
+  exit 1
+fi
+
+arquivo_fasta=$1
+banco_dados=$2
+
+# Executa BLAST com os parâmetros fornecidos
+blastn -query "$arquivo_fasta" -db "$banco_dados" -out resultado_blast.txt
+
+echo "Análise BLAST finalizada. Resultados salvos em resultado_blast.txt."
+```
+### Dicas do Allan 
+- Sempre verifique se os parâmetros necessários foram passados antes de executar o script.
+- Use parâmetros para flexibilizar scripts e adaptá-los a diferentes situações.
+- Combine scripts parametrizados com funções para criar pipelines mais robustos.
+
 
