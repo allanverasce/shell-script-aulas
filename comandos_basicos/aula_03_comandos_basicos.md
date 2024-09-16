@@ -92,3 +92,10 @@ Exemplo: Neste exemplo é dada permissão total ao script: leitura , execução 
 ```
 chmod 777 SeuScrit.sh
 ```
+11.  sudo: Este comando e permite que você aja como um superusuário ou usuário root na execução de um comando específico ou script.
+Exemplo
+
+```
+sudo apt install hplib
+sudo cd /root/
+```
