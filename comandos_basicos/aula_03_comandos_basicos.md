@@ -39,6 +39,12 @@ Exemplo:
 ```
 rm arquivo.txt
 ```
+Obs: Para apagar um diretório é necessário que o mesmo esteja vazio e você deve estar fora dele. Contudo, caso queira apagar um diretório com todo seu conteúdo você pode optar por usar os parâmetros: força (-f) e flags recursivas (r). Veja o exemplo:
+
+```
+rm -rf diretório/
+```
+
 6. cp: Copia arquivos ou diretórios.
 
 Exemplo:
