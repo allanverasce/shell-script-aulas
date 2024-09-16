@@ -52,4 +52,9 @@ wc TranscriptRun.txt
 ```
 O resultado é organizado desta forma: 52 (número de linhas) 256 (palavras) 3433 (tamanho em bytes) e por fim, nome do arquivo.
 
-10. 
+10. wget: Este comando vem de (World Wide Web get), ele é utilizado para baixar conteúdo da internet.
+
+Exemplo:
+```
+wget https://github.com/allanverasce/bpc/blob/main/doc/UserGuide.pdf
+```
