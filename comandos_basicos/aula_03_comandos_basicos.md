@@ -99,3 +99,10 @@ Exemplo
 sudo apt install hplib
 sudo cd /root/
 ```
+12.  tail:  Este comando exibe as últimas linhas de um determinado arquivo. Por padrão, ele mostra as últimas 10 linhas, mas você pode alterar esse padrão com o parâmetro -n.
+Exemplo:
+
+```
+tail long.txt
+tail -n 4 long.txt
+```
