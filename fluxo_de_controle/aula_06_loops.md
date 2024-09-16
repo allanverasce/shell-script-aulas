@@ -65,7 +65,7 @@ done
 ```
 Vamos pra explicação, fique atento: 
 - A variável i começa com o valor 1.
-- O loop while continua executando enquanto i for menor ou igual a 5.
+- O loop while continua executando enquanto i for menor ou igual a 10.
 - Em cada iteração, o valor de i é incrementado em 1. (incrementar significa dizer que será adicionado um valor)
 
 ### Exemplo Aplicado à Biologia com while:
