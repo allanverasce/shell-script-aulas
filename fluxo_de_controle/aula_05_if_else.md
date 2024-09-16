@@ -1,8 +1,85 @@
 ## Aula 05 - Estruturas Condicionais (if-else)
-As estruturas condicionais if-else são utilizadas para executar blocos de código diferentes dependendo de uma condição. Em biologia computacional, isso pode ser útil para verificar, por exemplo, se um dado genômico contém uma sequência específica ou para categorizar dados conforme condições biológicas.
+<p align="justify">As estruturas condicionais if-else permitem que um bloco de código seja executado dependendo do resultado de uma condição. Esse tipo de controle é essencial em programação, pois possibilita tomar decisões com base nos dados ou em determinadas circunstâncias. Em linguagens de script como o Bash, a sintaxe para o if-else é simples e flexível.</p>
+
+Sintaxe Básica:
+
+```
+if [ condição ]; then
+    # Comandos a serem executados se a condição for verdadeira
+elif [ outra_condição ]; then
+    # Comandos se a outra condição for verdadeira
+else
+    # Comandos a serem executados se todas as condições forem falsas
+fi
+```
+### Vamos falar sobre os principais Tipos de Testes Lógicos:
+1. Igualdade:
+
+- ==: Verifica se dois valores são iguais.
+- !=: Verifica se dois valores são diferentes.
+  
+Exemplo:
+
+```
+if [ "$var" == "valor" ]; then
+    echo "As variáveis são iguais."
+fi
+```
+2. Comparação Numérica:
+
+-eq: Verifica se dois números são iguais.
+-ne: Verifica se dois números são diferentes.
+-lt: Verifica se o primeiro número é menor que o segundo.
+-gt: Verifica se o primeiro número é maior que o segundo.
+
+Exemplo:
+
+```
+if [ "$num" -gt 10 ]; then
+    echo "O número é maior que 10."
+fi
+```
+3. Testes em Arquivos:
+
+-e: Verifica se o arquivo existe.
+-f: Verifica se o arquivo existe e é regular.
+-d: Verifica se o caminho é um diretório.
+Exemplo:
+
+```
+if [ -e "arquivo.txt" ]; then
+    echo "O arquivo existe."
+fi
+```
+4. Combinação de Testes:
+
+-a: Operador lógico E (AND).
+-o: Operador lógico OU (OR).
+Exemplo:
+```
+if [ "$var1" -gt 5 -a "$var2" -lt 10 ]; then
+    echo "Ambas as condições são verdadeiras."
+fi
+```
+Exemplo Genérico
+<p align="justify">Imagine que você está desenvolvendo um script para classificar a idade de indivíduos. Se a idade for menor que 18, o indivíduo é classificado como menor de idade; se for maior ou igual a 18, é classificado como adulto.</p>
+
+```
+#!/bin/bash
+
+idade=20
+
+if [ "$idade" -lt 18 ]; then
+    echo "Menor de idade."
+else
+    echo "Adulto."
+fi
+```
+
+<p align="justify">Estas estruturas podem ser utilizadas em biologia, isso pode ser útil para verificar, por exemplo, se um dado genômico contém uma sequência específica ou para categorizar dados conforme condições biológicas.</p>
 
 ### Exemplo aplicado à biologia:
-Imaginemos que você está processando dados de sequências genômicas, e precisa verificar se uma sequência contém uma determinada mutação, como a presença de uma substituição de base.
+<p align="justify">Imaginemos que você está processando dados de sequências genômicas, e precisa verificar se uma sequência contém uma determinada mutação, como a presença de uma substituição de base.</p>
 
 ```
 #!/bin/bash
