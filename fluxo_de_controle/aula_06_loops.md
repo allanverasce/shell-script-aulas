@@ -17,5 +17,5 @@ for i in {1..10}; do
     echo "Número: $i"
 done
 ```
-Esse script utiliza um loop para imprimir os números de 1 a 5. O loop é muito útil em diversas situações, como processar listas ou arquivos.
+Esse script utiliza um loop para imprimir os números de 1 a 10. O loop é muito útil em diversas situações, como processar listas ou arquivos.
 
