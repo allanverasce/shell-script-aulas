@@ -85,14 +85,14 @@ Exemplo:
 chmod +x SeuScript.sh
 ```
 Este comando pode ser utilizando com código numérico
-0 = sem permissão
-1 = somente execução
-2 = somente gravar
-3 = gravar e executar
-4 = somente ler
-5 = ler e executar
-6 = ler e gravar
-7 = ler, executar e gravar
+- 0 = sem permissão
+- 1 = somente execução
+- 2 = somente gravar
+- 3 = gravar e executar
+- 4 = somente ler
+- 5 = ler e executar
+- 6 = ler e gravar
+- 7 = ler, executar e gravar
 
 Exemplo: Neste exemplo é dada permissão total ao script: leitura , execução e gravação
 ```
