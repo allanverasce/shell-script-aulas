@@ -93,7 +93,8 @@ else
 fi
 ```
 
-Vamos ver mais um exemplo:
+Vamos ver mais um exemplo. Verificação de Tamanho de Arquivos FASTA
+Este script verifica se o arquivo FASTA tem mais de 1000 linhas (o que pode indicar um grande número de sequências, obs: apenas um exemplo kkk) e alerta o usuário.
 
 ```
 #!/bin/bash
@@ -109,5 +110,28 @@ if [ "$line_count" -gt 1000 ]; then
     echo "O arquivo $fasta_file contém muitas sequências: $line_count linhas."
 else
     echo "O arquivo $fasta_file contém poucas sequências: $line_count linhas."
+fi
+```
+
+Verificação de Formato de Arquivo Genômico. Este script verifica se o arquivo fornecido está no formato FASTA, GFF ou BAM, com base na extensão do arquivo, e realiza a operação adequada.
+
+```
+#!/bin/bash
+
+# Arquivo de entrada
+input_file="dados_genomicos.bam"
+
+# Condição if-else para verificar o tipo de arquivo
+if [[ "$input_file" == *.fasta ]]; then
+    echo "Processando arquivo FASTA..."
+    # Comando para processar o arquivo FASTA
+elif [[ "$input_file" == *.gff ]]; then
+    echo "Processando arquivo GFF..."
+    # Comando para processar o arquivo GFF
+elif [[ "$input_file" == *.bam ]]; then
+    echo "Processando arquivo BAM..."
+    # Comando para processar o arquivo BAM
+else
+    echo "Formato de arquivo desconhecido."
 fi
 ```
