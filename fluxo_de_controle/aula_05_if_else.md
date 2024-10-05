@@ -92,3 +92,22 @@ else
     echo "A mutação não foi encontrada."
 fi
 ```
+
+Vamos ver mais um exemplo:
+
+```
+#!/bin/bash
+
+# Arquivo FASTA a ser analisado
+fasta_file="sequencias.fasta"
+
+# Verificar o número de linhas no arquivo FASTA
+line_count=$(wc -l < "$fasta_file")
+
+# Condição if-else
+if [ "$line_count" -gt 1000 ]; then
+    echo "O arquivo $fasta_file contém muitas sequências: $line_count linhas."
+else
+    echo "O arquivo $fasta_file contém poucas sequências: $line_count linhas."
+fi
+```
