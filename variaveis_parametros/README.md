@@ -43,3 +43,39 @@ echo "O primeiro parâmetro é: $parametro1"
 echo "O segundo parâmetro é: $parametro2"
 ```
 
+# Exemplos de Operações com Variáveis e Parâmetros em Shell Script
+
+## 1. Operações Aritméticas
+
+### Exemplo: Cálculo da Soma
+
+```bash
+#!/bin/bash
+
+# Recebendo dois números como parâmetros
+num1=$1
+num2=$2
+
+# Calculando a soma
+soma=$((num1 + num2))
+
+# Exibindo o resultado
+echo "A soma de $num1 e $num2 é: $soma"
+```
+
+## 2. Operações de Manipulação de Strings
+Exemplo: Concatenação de Strings
+```
+#!/bin/bash
+
+# Recebendo dois nomes como parâmetros
+nome1=$1
+nome2=$2
+
+# Concatenando os nomes
+nome_completo="$nome1 $nome2"
+
+# Exibindo o nome completo
+echo "O nome completo é: $nome_completo"
+```
+
