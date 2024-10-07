@@ -63,8 +63,12 @@ Conteúdo do arquivo sequencias.fasta
 ```
 sed 's/>.*\(gene_[0-9]*\).*/>\1/' sequencias.fasta
 ```
+Neste exemplo, todos os IDs das sequências são renomeados, mantendo apenas a parte que corresponde ao padrão gene_[0-9]*.
 
+2. Extração de informações de arquivos GFF Arquivos GFF contêm informações de anotação de genomas, e o sed pode ser usado para extrair ou filtrar essa
 
-
+```
+sed -n '/gene/{n;p}' /home/allan/Downloads/Homo_sapiens.GRCh38.112.gff3
+```
 
 
