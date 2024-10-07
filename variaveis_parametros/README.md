@@ -1,1 +1,45 @@
+# Definindo Variáveis e Passando Parâmetros no seu Script
+
+## 1. Definindo Variáveis em Shell Script
+
+Para definir uma variável em um shell script, você deve usar a seguinte sintaxe:
+
+```bash
+NOME_DA_VARIAVEL=valor
+```
+Exemplo: 
+
+```
+nome="Allan Veras, seu professor preferido kkk"
+idade=30
+```
+### Notas sobre variáveis
+- Não deve haver espaços ao redor do sinal de igual = ao definir uma variável.
+- As variáveis são sensíveis a maiúsculas e minúsculas.
+
+## 2. Utilizando Variáveis em Shell Script
+Para utilizar uma variável definida, você deve precedê-la com o caractere $:
+
+```
+echo "Meu nome é $nome e tenho $idade anos."
+```
+
+## 3. Passando Parâmetros em Linha de Comando
+Você pode passar parâmetros para um script de shell ao chamá-lo. Os parâmetros são acessíveis dentro do script usando $1, $2, $3, etc.
+
+Exemplo de chamada do script:
+```
+./meu_script.sh parametro1 parametro2
+```
+## 4. Utilizando Parâmetros no Script
+Dentro do script, você pode acessar os parâmetros da seguinte forma:
+
+```
+#!/bin/bash
+parametro1=$1
+parametro2=$2
+
+echo "O primeiro parâmetro é: $parametro1"
+echo "O segundo parâmetro é: $parametro2"
+```
 
