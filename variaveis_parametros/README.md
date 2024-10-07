@@ -2,3 +2,5 @@
 
 
 
+## Estrutura do Módulo
+- `variaveis&parametros.md`: Como definir e usar variáveis e parâmetros no Shell Script.
