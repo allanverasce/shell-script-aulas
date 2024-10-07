@@ -32,3 +32,18 @@ Se quisermos imprimir apenas as linhas onde o valor da segunda coluna é maior q
 awk '$2 > 100 {print $0}' arquivo.txt
 ```
 
+3. Contagem de Linhas e Palavras
+
+O awk pode ser usado para contar o número de linhas e o número total de campos (palavras) em um arquivo:
+``
+awk 'END {print "Número de linhas:", NR; print "Número de campos:", NF}' arquivo.txt
+```
+
+4. Somar Valores de uma Coluna
+
+Para somar todos os valores da terceira coluna de um arquivo:
+
+```
+awk '{sum += $3} END {print "Soma total:", sum}' arquivo.txt
+``
+
