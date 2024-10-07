@@ -48,7 +48,21 @@ sed '2,4s/maçã/laranja/' frutas.txt
 ```
 Aqui, as linhas 2 a 4 terão "maçã" substituído por "laranja".
 
+# Vamos aplicar o sed na Biologia?
+<p align="justify">O sed é frequentemente utilizado para manipular arquivos de dados como FASTA, GFF, CSV, ou arquivos de resultados de pipelines bioinformáticos. Esses arquivos podem ser muito grandes e conter milhões de linhas, tornando a automação essencial.</p>
 
+  1. Renomeação de IDs de sequência em arquivos FASTA Muitas vezes, é necessário alterar os identificadores de sequências em arquivos FASTA para simplificar as análises ou para conformidade com requisitos de outros programas: </p>
+Conteúdo do arquivo sequencias.fasta
+<p>>gene_1234 sequencia_1</p>
+<p>ATGCGTACGTA</p>
+<p>>gene_5678 sequencia_2</p>
+<p>CGTACGTAGCT</p>
+<p>>gene_9101 sequencia_3</p>
+<p>TACGATCGAT</p>
+
+```
+sed 's/>.*\(gene_[0-9]*\).*/>\1/' sequencias.fasta
+```
 
 
 
