@@ -87,4 +87,4 @@
    ```
    Aqui, `awk` extrai as colunas relevantes (contendo o ID do gene e suas coordenadas), e `sed` formata a saída removendo partes indesejadas.
 
-## Fica a dica, você pode avançar bem ajustando de acordo com seu problema.
+## Fica a dica, você pode avançar bem se ajustar os comandos de acordo com seu problema.
