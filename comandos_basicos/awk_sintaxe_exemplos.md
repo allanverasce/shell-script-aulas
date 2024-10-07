@@ -35,7 +35,8 @@ awk '$2 > 100 {print $0}' arquivo.txt
 3. Contagem de Linhas e Palavras
 
 O awk pode ser usado para contar o número de linhas e o número total de campos (palavras) em um arquivo:
-``
+
+```
 awk 'END {print "Número de linhas:", NR; print "Número de campos:", NF}' arquivo.txt
 ```
 
