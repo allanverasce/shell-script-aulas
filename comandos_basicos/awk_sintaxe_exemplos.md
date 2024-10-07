@@ -45,5 +45,6 @@ Para somar todos os valores da terceira coluna de um arquivo:
 
 ```
 awk '{sum += $3} END {print "Soma total:", sum}' arquivo.txt
-``
+```
+
 
