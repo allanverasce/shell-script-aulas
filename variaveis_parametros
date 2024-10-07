@@ -1,1 +1,9 @@
+# Definindo Variáveis e Passando Parâmetros
 
+## 1. Definindo Variáveis em Shell Script
+
+Para definir uma variável em um shell script, você deve usar a seguinte sintaxe:
+
+```bash
+NOME_DA_VARIAVEL=valor
+```
