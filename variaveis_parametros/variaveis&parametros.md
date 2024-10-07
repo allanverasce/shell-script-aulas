@@ -62,6 +62,39 @@ soma=$((num1 + num2))
 # Exibindo o resultado
 echo "A soma de $num1 e $num2 é: $soma"
 ```
+Vamos ampliar um pouco ...
+```
+#!/bin/bash
+
+# Verificando se dois números foram fornecidos como parâmetros
+if [ "$#" -ne 2 ]; then
+    echo "Uso: $0 <num1> <num2>"
+    exit 1
+fi
+
+# Recebendo os números como parâmetros
+num1=$1
+num2=$2
+
+# Calculando as operações
+soma=$((num1 + num2))
+subtracao=$((num1 - num2))
+multiplicacao=$((num1 * num2))
+
+# Verificando se o segundo número é zero para evitar divisão por zero
+if [ "$num2" -eq 0 ]; then
+    divisao="Erro: Divisão por zero não é permitida."
+else
+    divisao=$((num1 / num2))
+fi
+
+# Exibindo os resultados
+echo "Você forneceu os números: $num1 e $num2"
+echo "A soma de $num1 e $num2 é: $soma"
+echo "A subtração de $num1 e $num2 é: $subtracao"
+echo "A multiplicação de $num1 e $num2 é: $multiplicacao"
+echo "A divisão de $num1 por $num2 é: $divisao"
+```
 
 ## 2. Operações de Manipulação de Strings
 Exemplo: Concatenação de Strings
