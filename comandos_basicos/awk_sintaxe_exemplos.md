@@ -1,4 +1,4 @@
-# Bora falar um pouco sobre o AWK
+# Bora falar um pouco sobre o AWK?
 <p align="justify"> O awk é uma poderosa ferramenta de processamento de texto em sistemas Unix/Linux, amplamente utilizada para análise, manipulação e extração de dados de arquivos de texto. Ele opera linha por linha e processa os dados de acordo com padrões especificados, permitindo o uso de expressões regulares, operações matemáticas, e construção de relatórios. O awk é muito eficiente para lidar com dados estruturados, como arquivos CSV, TSV e de colunas fixas, o que o torna uma excelente ferramenta para bioinformática, onde grandes volumes de dados precisam ser filtrados e analisados rapidamente.</p>
 
 ## Sintaxe Básica
@@ -16,9 +16,19 @@ As variáveis predefinidas mais comuns no awk são:
     - NF: Número de campos na linha atual.
 
 ### Vamos de exemplos Genéricos de Uso do awk
-1. Extração de Colunas Específicas
+
+1. Extração de Colunas Específicas (O arquivo.txt pode ser baixado aqui no repositório)
 Se quisermos imprimir apenas as colunas 1 e 3 de um arquivo com dados separados por espaços ou tabulações:
 
 ```
 awk '{print $1, $3}' arquivo.txt
 ```
+
+2. Condicionais com awk 
+
+Se quisermos imprimir apenas as linhas onde o valor da segunda coluna é maior que 100:
+
+```
+awk '$2 > 100 {print $0}' arquivo.txt
+```
+
