@@ -37,7 +37,7 @@ sed '/maçã/d' frutas.txt
 Inserir texto após um padrão O sed pode adicionar linhas de texto após encontrar um padrão: (To sabendo que já ia perguntar, né??)
 
 ```
-sed '/padrão/a\Texto adicional' arquivo.txt
+sed '/maçã/a\Esta é uma fruta' frutas.txt
 ```
 Neste exemplo, ele insere "Texto adicional" após a linha que contém o "padrão".
 
