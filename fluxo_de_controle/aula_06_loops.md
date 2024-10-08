@@ -127,4 +127,75 @@ Vamos pra explicação, fique atento:
 - for: Ideal para quando você conhece a quantidade de iterações antecipadamente, como percorrer uma lista ou intervalo de números.
 - while: Útil quando o número de iterações não é conhecido, e você precisa repetir uma ação enquanto uma condição específica for verdadeira.
 
-#### Ficou mais claro?, eu espero que sim. Então quando for utilizar qualquer uma destas estruturas pense nas características e faça sua escolha!
+#### Vamos treinar, segue uns exemplos pra você praticar no seu computador.
+
+Neste exemplo, usamos o laço for para iterar sobre uma lista de números e calcular seus quadrados.
+```
+#!/bin/bash
+
+# Laço para iterar sobre uma lista de números
+for num in 1 2 3 4 5; do
+    square=$((num * num))
+    echo "O quadrado de $num é $square"
+done
+```
+### Como funciona:
+- O laço for percorre uma lista de números.
+- Em cada iteração, calcula o quadrado de um número e imprime o resultado.
+
+Aqui, usamos o laço while para contar de 1 a 5.
+```
+#!/bin/bash
+
+# Definindo a variável de contagem
+count=1
+
+# Laço while para iterar enquanto count for menor ou igual a 5
+while [ $count -le 5 ]; do
+    echo "Contagem: $count"
+    count=$((count + 1))
+done
+```
+
+### Como funciona:
+- O laço while continua a execução enquanto a condição [ $count -le 5 ] for verdadeira.
+- A cada iteração, o valor da variável count é incrementado em 1.
+
+## Laço for Aplicado à Biologia (Iterando sobre Arquivos FASTA)
+Este script itera sobre todos os arquivos FASTA em um diretório e calcula o número de sequências em cada arquivo.
+```
+#!/bin/bash
+
+# Diretório com arquivos FASTA
+fasta_dir="/path/to/fasta_files"
+
+# Laço para iterar sobre cada arquivo FASTA no diretório
+
+for fasta_file in $fasta_dir/*.fasta; do
+    # Conta o número de sequências no arquivo (linhas começando com ">")
+    num_sequences=$(grep -c "^>" $fasta_file)
+    echo "O arquivo $fasta_file contém $num_sequences sequências"
+done
+```
+### Como funciona:
+- O laço for percorre todos os arquivos .fasta no diretório especificado.
+- Para cada arquivo, conta o número de sequências usando grep -c "^>", que conta as linhas que começam com o símbolo >, e exibe o resultado.
+
+## Laço while Aplicado à Biologia (Processamento de Dados GFF)
+Neste exemplo, usamos um laço while para iterar sobre as linhas de um arquivo GFF e extrair genes de interesse.
+
+```
+#!/bin/bash
+
+# Arquivo GFF
+gff_file="genome_annotations.gff"
+
+# Laço while para ler cada linha do arquivo GFF
+while IFS= read -r line; do
+    # Verifica se a linha contém o gene de interesse (exemplo: Name=CDY19P)
+    if echo "$line" | grep -q "Name=CDY19P"; then
+        echo "Gene encontrado: $line"
+    fi
+done < "$gff_file"
+```
+
