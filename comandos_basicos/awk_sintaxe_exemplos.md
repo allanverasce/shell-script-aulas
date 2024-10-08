@@ -45,7 +45,7 @@ awk 'END {print "Número de linhas:", NR; print "Número de campos:", NF}' arqui
 Para somar todos os valores da terceira coluna de um arquivo:
 
 ```
-awk '{sum += $3} END {print "Soma total:", sum}' arquivo.txt
+awk '{sum += $2} END {print "Soma total:", sum}' arquivo1.txt
 ```
 
 # Vamos aplicar a Biologia ?
