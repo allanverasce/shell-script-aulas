@@ -70,5 +70,6 @@ Neste exemplo, todos os IDs das sequências são renomeados, mantendo apenas a p
 ```
 sed -n '/gene/{n;p}' /home/allan/Downloads/Homo_sapiens.GRCh38.112.gff3
 ```
-
+- n: Este comando faz o sed avançar para a próxima linha do arquivo. Ou seja, após encontrar uma linha com "gene", o sed pula para a linha seguinte e aplica a próxima ação.
+- p: Este comando faz o sed imprimir a linha que foi lida após o comando n. Assim, ele imprime a linha imediatamente após aquela que contém "gene".
 
