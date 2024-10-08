@@ -46,3 +46,66 @@ string="Estudo de Genética"
 nova_string=${string//Genética/Biologia}
 echo "$nova_string"  # Exibe "Estudo de Biologia"
 ```
+## 4.Substituindo uma Parte da String
+Para substituir um trecho de uma string por outro, usamos a sintaxe ${string/antigo/novo}
+```
+#!/bin/bash
+
+# Definindo uma string
+str="ATGCGTAGCTAG"
+
+# Substituindo 'G' por 'A'
+modified_str=${str/G/A}
+
+echo "String modificada: $modified_str"
+```
+
+Para substituir todas as ocorrências, você deve usar a sintaxe ${str//old/new} (com dois /).
+```
+#!/bin/bash
+
+# Definindo uma string
+str="ATGCGTAGCTAG"
+
+# Substituindo todas as ocorrências de 'G' por 'A'
+modified_str=${str//G/A}
+
+# Exibindo o resultado
+echo "String modificada: $modified_str"
+```
+
+### 5.Extraindo Subsequências de DNA
+Este script extrai uma subsequência específica de uma sequência de DNA.
+```
+#!/bin/bash
+
+# Sequência de DNA
+dna_sequence="ATGCGTACGTTAGCTAGCGTAGCTA"
+
+# Extraindo uma subsequência (da posição 4 à 10), sendo o 3 a coordenada inicial, e 7 o comprimento 
+subseq=${dna_sequence:3:7}
+
+echo "Subsequência extraída: $subseq"
+```
+### 6.Substituindo Sequências em um Arquivo GFF
+Aqui substituímos um valor de atributo em um arquivo GFF, onde queremos modificar a informação sobre o gene.
+
+```
+#!/bin/bash
+
+# Arquivo GFF (exemplo)
+gff_file="genes.gff"
+
+# Substituindo o nome de um gene "GeneX" por "GeneY". Lembre de analisar o GFF primeiro.
+sed 's/GeneX/GeneY/g' "$gff_file" > "modified_genes.gff"
+
+echo "Substituição de genes realizada no arquivo $gff_file"
+```
+Exemplo de Input
+- chr1  .  gene  1000  5000  .  +  .  ID=GeneX;Name=GeneX
+- chr1  .  gene  6000  9000  .  +  .  ID=GeneZ;Name=GeneZ
+
+Output
+- chr1  .  gene  1000  5000  .  +  .  ID=GeneY;Name=GeneY
+- chr1  .  gene  6000  9000  .  +  .  ID=GeneZ;Name=GeneZ
+
