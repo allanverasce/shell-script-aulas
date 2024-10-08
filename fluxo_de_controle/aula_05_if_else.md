@@ -135,3 +135,91 @@ else
     echo "Formato de arquivo desconhecido."
 fi
 ```
+
+### Vamos treinar mais? Segue mais exemplos.
+Neste exemplo, criamos um script que recebe um número como argumento e verifica se é positivo, negativo ou zero
+
+```
+#!/bin/bash
+
+# Recebe o número como argumento
+num=$1
+
+# Verifica se o número é maior, menor ou igual a zero
+if [ $num -gt 0 ]; then
+    echo "$num é um número positivo"
+elif [ $num -lt 0 ]; then
+    echo "$num é um número negativo"
+else
+    echo "$num é zero"
+fi
+```
+### Vamos pra explicação:
+- O script compara o valor fornecido como argumento ($1) com zero usando operadores numéricos (-gt para maior que, -lt para menor que e -eq para igualdade).
+- Dependendo do resultado, ele imprime uma mensagem informando se o número é positivo, negativo ou zero.
+
+<p align="justify">Neste exemplo, criamos um script que processa um arquivo FASTA e verifica se o número de sequências é maior ou menor que um valor limite. Se for maior que o limite, exibe uma mensagem; caso contrário, realiza outro tipo de processamento. 
+
+```
+#!/bin/bash
+
+# Arquivo FASTA a ser processado
+fasta_file=$1
+# Limite de número de sequências
+limit=$2
+
+# Conta o número de sequências no arquivo (assume que cada sequência começa com '>')
+num_sequences=$(grep -c "^>" $fasta_file)
+
+echo "Número de sequências no arquivo: $num_sequences"
+
+# Verifica se o número de sequências é maior ou menor que o limite
+if [ $num_sequences -gt $limit ]; then
+    echo "O número de sequências excede o limite de $limit. Processando de forma paralela..."
+    # Adicione seu processamento paralelo aqui
+else
+    echo "O número de sequências está dentro do limite. Processamento padrão..."
+    # Adicione seu processamento padrão aqui
+fi
+```
+### Como funciona:
+- Exemplo de execução : bash o.sh /data1/assembly/DRR015123/scaffolds.fasta 100
+- O script conta quantas sequências existem em um arquivo FASTA (usando grep -c "^>", que busca as linhas que começam com >).
+- Compara o número de sequências com o valor limite fornecido como segundo argumento.
+- Se o número de sequências for maior que o limite, uma mensagem indica que o processamento será paralelo; caso contrário, é feito um processamento padrão.
+
+## Validação de Parâmetros (Aplicado à Biologia)
+Neste script, verificamos se o usuário forneceu os parâmetros corretos (um arquivo FASTA e um arquivo GFF). Se algum deles estiver ausente, o script exibirá uma mensagem de erro.
+
+```
+#!/bin/bash
+
+# Verifica se os dois arquivos foram fornecidos como parâmetros
+if [ $# -ne 2 ]; then
+    echo "Uso: $0 <arquivo.fasta> <arquivo.gff>"
+    exit 1
+fi
+
+fasta_file=$1
+gff_file=$2
+
+# Verifica se os arquivos existem
+if [ ! -f $fasta_file ]; then
+    echo "Arquivo FASTA não encontrado: $fasta_file"
+    exit 1
+fi
+
+if [ ! -f $gff_file ]; then
+    echo "Arquivo GFF não encontrado: $gff_file"
+    exit 1
+fi
+
+# Processamento dos arquivos
+echo "Processando o arquivo FASTA: $fasta_file"
+echo "Processando o arquivo GFF: $gff_file"
+```
+### Como ele esta funcionando:
+- O script verifica se dois argumentos foram passados. Se não, exibe uma mensagem de uso correto e sai.
+- Verifica se os arquivos fornecidos existem (-f). ## Dica do Allan.. Verifica se ele existe, pq pode informar e não exitir.
+- Se os arquivos estiverem corretos, prossegue com o processamento.
+
