@@ -19,7 +19,7 @@ Para extrair uma substring de uma string, você pode usar a sintaxe `${string:st
 ### Exemplo:
 ```bash
 string="Biologia Molecular"
-substring=${string:0:7}  # Extrai "Biolog"
+substring=${string:0:7}  # Extrai "Biologi"
 echo "$substring"
 ```
 
