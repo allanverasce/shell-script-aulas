@@ -221,3 +221,41 @@ Agora o bloco for
 - Se as bases forem iguais, incrementa a variável similarity:
 - similarity=$((similarity+1)): Isso aumenta o contador de similaridade em 1.
 
+## 9. Concatenação de String no Shell Script
+A concatenação de strings em Shell Script é o processo de unir duas ou mais strings em uma única string. No Shell, isso é feito simplesmente juntando as strings, sem necessidade de um operador específico. Exemplo: `nova_string="$string1$string2"`
+
+Exemplo no Script:
+
+```
+#!/bin/bash
+
+# Definindo duas strings
+nome="Gene"
+tipo="protein_coding"
+
+# Concatenando as strings
+resultado="$nome: $tipo"
+
+# Exibindo o resultado
+echo "$resultado"
+```
+Exemplo: Criando Identificadores de Sequência
+Ao trabalhar com sequências de DNA, você pode precisar criar identificadores únicos para cada sequência.
+```
+#!/bin/bash
+
+# Definindo um nome de gene e um número de amostra
+gene="BRCA1"
+amostra=1
+
+# Criando um identificador único
+identificador="Gene_${gene}_Sample_${amostra}"
+
+# Exibindo o identificador
+echo "Identificador: $identificador"
+```
+
+
+
+
+
