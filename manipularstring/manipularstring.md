@@ -124,7 +124,7 @@ else
 fi
 ```
 ### Vamos explicar! Fica ligado pq temos expressão regular aqui..
-- Linha 5:
+- Na Linha:
   ```
   if [[ $sequencia =~ ^[ATCG]+$ ]]; then
   ```
