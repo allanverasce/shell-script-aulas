@@ -124,10 +124,13 @@ else
 fi
 ```
 ### Vamos explicar! Fica ligado pq temos expressão regular aqui..
-- Linha 5: if [[ $sequencia =~ ^[ATCG]+$ ]]; then
+- Linha 5:
+  ```
+  if [[ $sequencia =~ ^[ATCG]+$ ]]; then
+  ```
 ### Significado:
 - Esta linha inicia um bloco condicional (if-else), onde será feita a verificação se a sequência de DNA fornecida contém apenas os caracteres A, T, C, ou G.
-### [[ $sequencia =~ ^[ATCG]+$ ]]:
+### ```[[ $sequencia =~ ^[ATCG]+$ ]]:```
 - $sequencia: Refere-se ao conteúdo da variável sequencia, ou seja, a sequência de DNA fornecida.
 - =~: Esse operador faz a correspondência da string com um padrão (regex - expressão regular).
 - ^[ATCG]+$: Essa é a expressão regular (regex) usada para fazer a correspondência com a sequência. Vamos quebrá-la:
