@@ -109,3 +109,31 @@ Output
 - chr1  .  gene  1000  5000  .  +  .  ID=GeneY;Name=GeneY
 - chr1  .  gene  6000  9000  .  +  .  ID=GeneZ;Name=GeneZ
 
+### 7. Exemplo de script que verifica se uma sequência dada é uma sequência válida de DNA (contém apenas "A", "T", "C", "G").
+
+```
+#!/bin/bash
+
+sequencia=$1
+
+# Verificar se a sequência contém apenas os caracteres A, T, C, G
+if [[ $sequencia =~ ^[ATCG]+$ ]]; then
+    echo "Sequência válida de DNA"
+else
+    echo "Sequência inválida de DNA"
+fi
+```
+### Vamos explicar! Fica ligado pq temos expressão regular aqui..
+- Linha 5: if [[ $sequencia =~ ^[ATCG]+$ ]]; then
+### Significado:
+- Esta linha inicia um bloco condicional (if-else), onde será feita a verificação se a sequência de DNA fornecida contém apenas os caracteres A, T, C, ou G.
+### [[ $sequencia =~ ^[ATCG]+$ ]]:
+- $sequencia: Refere-se ao conteúdo da variável sequencia, ou seja, a sequência de DNA fornecida.
+- =~: Esse operador faz a correspondência da string com um padrão (regex - expressão regular).
+- ^[ATCG]+$: Essa é a expressão regular (regex) usada para fazer a correspondência com a sequência. Vamos quebrá-la:
+- ^: Indica o início da string.
+- [ATCG]: Define um conjunto de caracteres válidos (A, T, C, G).
+- +: Indica que a string deve ter pelo menos um desses caracteres e pode ter mais.
+- $: Indica o final da string.
+- Portanto, o padrão verifica se a sequência contém apenas caracteres A, T, C, ou G do início ao fim.
+- then: Se a condição for verdadeira (ou seja, a sequência contém apenas A, T, C, G), o script executa o bloco de código associado.
