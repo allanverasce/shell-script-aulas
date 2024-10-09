@@ -350,7 +350,8 @@ fi
 sequencia=$1
 
 # Total de caracteres (comprimento da sequência)
-comprimentoTotal=${#sequencia}
+TOT=$(echo -n "$sequencia" | wc -m)
+
 
 # Contagem de Gs e Cs
 G=$(echo "$sequencia" | grep -o "G" | wc -l)
@@ -360,18 +361,18 @@ C=$(echo "$sequencia" | grep -o "C" | wc -l)
 GC=$((G + C))
 
 # Cálculo do conteúdo GC em percentual
-if [ $comprimentoTotal -ne 0 ]; then
-    Percent=$(echo "scale=4; $GC / $comprimentoTotal * 100" | bc)
+if [ $TOT -ne 0 ]; then
+    Percent=$(echo "scale=4; $GC / $TOT * 100" | bc)
 else
     Percent=0
 fi
-
 # Exibindo os resultados
 echo "Sequência: $sequencia"
 echo "Total de Gs: $G"
 echo "Total de Cs: $C"
-echo "Comprimento da sequência: $comprimentoTotal"
+echo "Comprimento da sequência: $TOT"
 echo "Conteúdo GC: $Percent%"
+
 ```
 ### O que temos de novo aqui?
 
