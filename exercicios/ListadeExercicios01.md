@@ -11,3 +11,7 @@
 - Objetivo: Uso de loops para processar múltiplos arquivos.
 - Exemplo: ./processa_arquivos_fasta.sh /caminho/diretorio/
 
+## Essa vamos fazer em sala
+4. Crie um script que receba uma sequência de proteína (string contendo aminoácidos representados por letras) e verifique se ela contém apenas os 20 aminoácidos válidos.
+- Objetivo: Manipulação de strings e condicionais.
+- Exemplo de como executar: bash valida_proteina.sh "MKVAVLG"
