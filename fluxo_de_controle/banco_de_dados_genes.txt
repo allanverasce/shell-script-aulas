@@ -1,0 +1,6 @@
+
+geneA - Função: Envolvido no metabolismo celular
+geneB - Função: Regulação do ciclo celular
+geneC - Função: Atividade de transcrição
+geneD - Função: Reparo de DNA
+geneE - Função: Transporte de proteínas
