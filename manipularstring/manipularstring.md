@@ -41,7 +41,7 @@ echo "Terceiro gene: $gene3"
 - IFS=',': IFS é a Internal Field Separator, uma variável especial do shell que define como o Bash separa os campos em uma string. Ao definir IFS como uma vírgula, você está informando ao Bash que as partes da string devem ser divididas sempre que uma vírgula for encontrada.
 - read -r gene1 gene2 gene3 <<< "$string":
 - O comando read é usado para ler a entrada e armazená-la em variáveis. O -r é um argumento que evita que o read interprete caracteres de escape, permitindo que a leitura seja feita literalmente.
-- <<< "$string" usa a heredoc de "aqui-string" para passar o valor da variável string como entrada para o comando read.
+- <<< "$string" usa a heredoc de "aqui-string" para passar o valor da variável string como entrada para o comando read. Comum para multiplas Strings
 - As partes da string são divididas com base no IFS, e cada parte é atribuída às variáveis gene1, gene2 e gene3 respectivamente.
 - Após esta linha, gene1 conterá "gene1", gene2 conterá "gene2" e gene3 conterá "gene3".
 
