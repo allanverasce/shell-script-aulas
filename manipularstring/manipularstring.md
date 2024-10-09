@@ -254,6 +254,69 @@ identificador="Gene_${gene}_Sample_${amostra}"
 # Exibindo o identificador
 echo "Identificador: $identificador"
 ```
+## 10.Transformação de Case
+Transforma strings para maiúsculas ou minúsculas.
+Veja o exemplo.
+```
+string="Olá Mundo"
+upper=${string^^}  # Converte para maiúsculas
+lower=${string,,}  # Converte para minúsculas
+echo "$upper"  # Saída: OLÁ MUNDO
+echo "$lower"  # Saída: olá mundo
+```
+
+## 11.Reversão de String
+Reverte uma string.
+Exemplo 
+```
+string="Olá"
+reversed=$(echo "$string" | rev)
+echo "$reversed"  # Saída: alO
+```
+## 12. Remover Espaços em Branco
+Remove espaços em branco no início e no fim.
+```
+string="   Olá Mundo   "
+trimmed=${string##*( )}
+echo "$trimmed"  # Saída: "   Olá Mundo"
+```
+## 13. Remover espaços em branco do início da string
+Você pode usar o comando sed para remover os espaços em branco do início de uma string. Veja o exemplo abaixo:
+```
+#!/bin/bash
+
+string="   Olá Mundo"
+trimmed_start=$(echo "$string" | sed 's/^[ \t]*//')
+
+echo "String original: '$string'"
+echo "String sem espaços no início: '$trimmed_start'"
+```
+
+## 14. Remover espaços em branco do início e do fim da string
+Para remover espaços em branco do início e do fim de uma string, você pode usar o comando sed também. Aqui está um exemplo:
+```
+#!/bin/bash
+
+string="   Olá Mundo   "
+trimmed_both=$(echo "$string" | sed 's/^[ \t]*//;s/[ \t]*$//')
+
+echo "String original: '$string'"
+echo "String sem espaços no início e no fim: '$trimmed_both'"
+```
+### Ficou confuso, veja a explicação
+- s/^[ \t]*//: Remove todos os espaços em branco e tabulações (\t) do início da string.
+- s/[ \t]*$//: Remove todos os espaços em branco e tabulações do fim da string.
+- ;: Separa os dois comandos de substituição, permitindo que sejam aplicados em sequência.
+
+## 15. Substituição com Regex
+Substitui partes da string usando expressões regulares. Neste exemplo, vamos tratar para remover números da String.
+
+```
+string="abc123"
+nova_string=$(echo "$string" | sed 's/[0-9]//g')
+echo "$nova_string"  # Saída: abc
+```
+
 
 
 
