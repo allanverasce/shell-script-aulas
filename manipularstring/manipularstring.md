@@ -335,8 +335,47 @@ nova_string=$(echo "$string" | sed 's/[0-9]//g')
 echo "$nova_string"  # Saída: abc
 ```
 
+# Aplicação na Biologia ... Script em Shell para Calcular o Conteúdo GC
 
+```
+#!/bin/bash
 
+# Verifica se a sequência foi passada como argumento
+if [ $# -eq 0 ]; then
+    echo "Uso: $0 \"sequência_de_dna\""
+    exit 1
+fi
+
+# A sequência de DNA é recebida como argumento
+sequencia=$1
+
+# Total de caracteres (comprimento da sequência)
+comprimentoTotal=${#sequencia}
+
+# Contagem de Gs e Cs
+G=$(echo "$sequencia" | grep -o "G" | wc -l)
+C=$(echo "$sequencia" | grep -o "C" | wc -l)
+
+# Total de Gs e Cs
+GC=$((G + C))
+
+# Cálculo do conteúdo GC em percentual
+if [ $comprimentoTotal -ne 0 ]; then
+    Percent=$(echo "scale=4; $GC / $comprimentoTotal * 100" | bc)
+else
+    Percent=0
+fi
+
+# Exibindo os resultados
+echo "Sequência: $sequencia"
+echo "Total de Gs: $G"
+echo "Total de Cs: $C"
+echo "Comprimento da sequência: $comprimentoTotal"
+echo "Conteúdo GC: $Percent%"
+```
+### O que temos de novo aqui?
+
+- Usa a equação `GC /comprimentoTotal × 100, para calcular o percentual de GC. scale=4 é utilizado para definir a precisão da saída para quatro casas decimais.
 
 
 
