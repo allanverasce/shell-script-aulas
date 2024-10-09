@@ -45,6 +45,16 @@ echo "Terceiro gene: $gene3"
 - As partes da string são divididas com base no IFS, e cada parte é atribuída às variáveis gene1, gene2 e gene3 respectivamente.
 - Após esta linha, gene1 conterá "gene1", gene2 conterá "gene2" e gene3 conterá "gene3".
 
+` Nota: IFS (Internal Field Separator): É uma variável especial no shell que determina como o Bash divide as palavras em uma string. O valor padrão de IFS inclui espaços, tabulações e novas linhas. No contexto do script, redefinir IFS como vazio (IFS=) impede a separação automática de palavras e permite que a linha seja lida completamente, preservando os espaços em branco. Veja um trecho de exemplo abaixo:` 
+```
+while IFS= read -r line; do
+    # Verifica se a linha contém o gene de interesse (exemplo: Name=CDY19P)
+    if echo "$line" | grep -q "Name=CDY19P"; then
+        echo "Gene encontrado: $line"
+    fi
+done < "$gff_file"
+```
+
 ## 3. Remoção de Strings
 Você pode remover substrings específicas usando a sintaxe ${string//substring/}.
 
