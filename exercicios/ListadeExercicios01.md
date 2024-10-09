@@ -1,4 +1,4 @@
-Exercício 1: Operações básicas com variáveis
+# Lista Exercício 1
 1. Crie um script que receba dois números como parâmetros e exiba a soma, subtração, multiplicação e divisão entre eles.
 - Objetivo: Trabalhar com variáveis e operadores matemáticos básicos.
 - Como dever ser executado: bash operacoes_basicas.sh 5 3
