@@ -7,4 +7,8 @@
 5. Concatenação de Strings Escreva um script que receba duas strings e as concatene.
 6. Contar palavras em uma String . Crie um script que conte quantas palavras existem em uma string.
 7. Contar nucleotídeos em uma sequência de DNA Crie um script que conte quantas vezes cada nucleotídeo (A, T, C, G) aparece em uma sequência de DNA.
-8. 
+8. Escreva um script em shell que receba uma string como argumento e exiba a substring que começa na posição 2 e tem comprimento 5.
+9. Escreva um script que verifique se uma sequência fornecida é uma sequência válida de RNA (contém apenas "A", "U", "C", "G"). Use expressões regulares.
+    
+
+
