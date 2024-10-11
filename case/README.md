@@ -96,3 +96,19 @@ case $sequencia in
     ;;
 esac
 ```
+### Explicação 
+1. Proteínas: O padrão usa aminoácidos típicos das proteínas, excluindo completamente os nucleotídeos (A, C, G, T, U). Assim, os padrões usados são:
+*[EFILPQZ]* | *[HKMRVWXY]* para representar aminoácidos que não coincidem com os nucleotídeos.
+2. DNA: A presença de timina (T) continua sendo um indicador de que a sequência é DNA.
+3. RNA: A presença de uracila (U) é o identificador para RNA.
+4. Entrada inválida: Se a sequência não contiver caracteres que identifiquem proteína, DNA ou RNA, o script trata como entrada desconhecida.
+### Testes sugeridos:
+- DNA: Sequências como ATCG, AGTCTG.
+- RNA: Sequências como AUCG, AGUCUG.
+- Proteína: Sequências como FLPQ, MGWK, que contêm aminoácidos e não nucleotídeos.
+
+
+
+
+
+
