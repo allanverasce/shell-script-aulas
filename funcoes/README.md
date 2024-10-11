@@ -79,3 +79,20 @@ calcula_gc() {
 # Chamando a função com uma sequência de exemplo
 calcula_gc "ATGCGCATTAGC"
 ```
+
+Função para Gerar a Sequência Complementar de DNA
+Esta função gera a sequência complementar de uma cadeia de DNA, trocando os pares de bases A-T e C-G.
+```
+#!/bin/bash
+
+# Função para gerar a sequência complementar de DNA
+complemento_dna() {
+  sequencia=$(echo $1 | tr 'a-z' 'A-Z')
+  complemento=$(echo $sequencia | tr 'ATCG' 'TAGC')
+  echo "Sequência original: $sequencia"
+  echo "Sequência complementar: $complemento"
+}
+
+# Chamando a função com uma sequência de exemplo
+complemento_dna "ATGCGCATTAGC"
+```
