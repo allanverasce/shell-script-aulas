@@ -61,3 +61,38 @@ esac
 - Se o dia for "seg", ele responde com "Hoje é segunda-feira!".
 - Para dias de fim de semana ("sab" ou "dom"), ele exibe "Hoje é fim de semana!".
 - O * (curinga) captura qualquer outra entrada e responde com "Entrada inválida!".
+
+## Exemplo Aplicado à Biologia
+Em um contexto biológico, podemos usar o comando case para automatizar processos comuns, como o tratamento de arquivos FASTA/FASTQ com diferentes tipos de sequências.
+Exemplo: Verificar Tipo de Sequência (DNA, RNA, Proteína)
+Este exemplo de script determina o tipo de sequência biológica com base em sua composição de nucleotídeos ou aminoácidos.
+
+```
+#!/bin/bash
+
+echo "Digite a sequência (DNA, RNA ou Proteína):"
+read sequencia
+
+# Remove caracteres especiais e converte para maiúsculas
+sequencia=$(echo "$sequencia" | tr -d '\n\r' | tr 'a-z' 'A-Z')
+
+# Verifica o tipo de sequência
+case $sequencia in
+  # Verifica se contém caracteres específicos de aminoácidos (excluindo A, C, G, T, U)
+  *[EFILPQZ]* | *[HKMRVWXY]*)
+    echo "A sequência contém aminoácidos, é uma proteína."
+    ;;
+  # Verifica se contém Timina (T), típico do DNA
+  *[T]*)
+    echo "A sequência contém timina (T), é DNA."
+    ;;
+  # Verifica se contém Uracila (U), típico do RNA
+  *[U]*)
+    echo "A sequência contém uracila (U), é RNA."
+    ;;
+  # Se não corresponde a nenhuma das opções acima
+  *)
+    echo "Entrada inválida ou sequência desconhecida!"
+    ;;
+esac
+```
