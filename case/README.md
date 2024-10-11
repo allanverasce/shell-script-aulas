@@ -62,6 +62,12 @@ esac
 - Para dias de fim de semana ("sab" ou "dom"), ele exibe "Hoje é fim de semana!".
 - O * (curinga) captura qualquer outra entrada e responde com "Entrada inválida!".
 
+## Vantagens do Uso de case
+- Simplicidade: Fácil de entender e usar para múltiplas comparações.
+- Leitura: Torna o código mais legível e menos sujeito a erros em comparação com longas cadeias de if-else.
+- Desempenho: Em muitos casos, case pode ser mais rápido que `if-else aninhado`, especialmente com muitos casos.
+
+
 ## Exemplo Aplicado à Biologia
 Em um contexto biológico, podemos usar o comando case para automatizar processos comuns, como o tratamento de arquivos FASTA/FASTQ com diferentes tipos de sequências.
 Exemplo: Verificar Tipo de Sequência (DNA, RNA, Proteína)
