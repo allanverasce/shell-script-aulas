@@ -25,6 +25,7 @@ esac
 Exemplo Genérico
 Aqui está um exemplo básico de um script que pergunta o dia da semana e responde com uma mensagem apropriada usando case.
 
+```
 #!/bin/bash
 
 echo "Digite o dia da semana (seg, ter, qua, etc.):"
