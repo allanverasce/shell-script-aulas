@@ -4,7 +4,7 @@ O comando `case` no shell script é usado para realizar comparações simples de
 
 Sintaxe
 
-```bash
+```
 case palavra in
   padrão1)
     # Comandos se padrão1 for satisfeito
@@ -17,6 +17,7 @@ case palavra in
     ;;
 esac
 ```
+
 - palavra: é a variável ou expressão que será comparada.
 - padrão: é o valor ou expressão regular que será comparada com palavra.
 - ;;: é o delimitador de finalização para cada bloco de comandos.
