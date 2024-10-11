@@ -17,3 +17,6 @@ case palavra in
     ;;
 esac
 ```
+- palavra: é a variável ou expressão que será comparada.
+- padrão: é o valor ou expressão regular que será comparada com palavra.
+- ;;: é o delimitador de finalização para cada bloco de comandos.
