@@ -1,8 +1,8 @@
 # Automação e Integração com Ferramentas Bioinformáticas (Ainda em construção)
-Neste módulo, abordaremos como utilizar Shell Script para automatizar e integrar ferramentas bioinformáticas em pipelines de análise. A automação dessas tarefas é essencial para o processamento eficiente de grandes volumes de dados, especialmente em biologia computacional.
+<p align="justify">Neste módulo, abordaremos como utilizar Shell Script para automatizar e integrar ferramentas bioinformáticas em pipelines de análise. A automação dessas tarefas é essencial para o processamento eficiente de grandes volumes de dados, especialmente em biologia computacional.</p>
 
 ## 1. Execução de Programas Externos
-Ferramentas bioinformáticas como BLAST, BWA, SAMtools e Trimmomatic são frequentemente usadas em análises genômicas e proteômicas. Executar essas ferramentas manualmente pode ser demorado e sujeito a erros. Utilizando scripts em Shell, podemos automatizar essas execuções e integrar as ferramentas em um fluxo contínuo de trabalho.
+<p align="justify">Ferramentas bioinformáticas como BLAST, BWA, SAMtools e Trimmomatic são frequentemente usadas em análises genômicas e proteômicas. Executar essas ferramentas manualmente pode ser demorado e sujeito a erros. Utilizando scripts em Shell, podemos automatizar essas execuções e integrar as ferramentas em um fluxo contínuo de trabalho.</p>
 
 ### Principais Tarefas:
 - Integração com programas bioinformáticos: O Shell Script pode ser usado para chamar diretamente esses programas, fornecendo parâmetros e capturando saídas.
@@ -20,7 +20,7 @@ comando_externo --opcoes entrada > saida
 - `>` saida: Redirecionamento da saída do programa para um arquivo ou outro comando.
 
 ### Exemplo 1: Integração com o BLAST
-O BLAST (Basic Local Alignment Search Tool) é uma das ferramentas mais utilizadas para comparar sequências de nucleotídeos ou proteínas. Aqui temos um exemplo simples do blast, caso queira adicionar mais parâmetros só fazer essa alteração diretamente na linha de comando do blast. `Não esquece de instalar o BLAST - sudo apt install ncbi-blast+`
+<p align="justify">O BLAST (Basic Local Alignment Search Tool) é uma das ferramentas mais utilizadas para comparar sequências de nucleotídeos ou proteínas. Aqui temos um exemplo simples do blast, caso queira adicionar mais parâmetros só fazer essa alteração diretamente na linha de comando do blast. `Não esquece de instalar o BLAST - sudo apt install ncbi-blast+`</p>
 
 ```
 #!/bin/bash
