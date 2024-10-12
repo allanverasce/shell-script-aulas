@@ -77,3 +77,34 @@ O comando blastn é utilizado para executar o BLAST.
 - -db: Define o banco de dados que foi preparado anteriormente com makeblastdb.
 - -out: Define o arquivo de saída que conterá o resultado do BLAST.
 O script verifica se o BLAST foi executado com sucesso. Se for, uma mensagem de sucesso é exibida; caso contrário, ele exibe uma mensagem de erro e interrompe o script.
+
+### Exemplo 2: Integração com BWA e SAMtools
+<p align="justify">Nesta seção, vamos automatizar um pipeline para alinhamento de leituras FASTQ com o BWA e manipulação dos resultados com o SAMtools. Este exemplo é uma das etapas realizada em várias análises de dados dentre elas o RNA-Seq.</p>
+
+```
+#!/bin/bash
+
+# Etapa 1: Trimagem de Leituras com Trimmomatic
+input_r1="amostra_R1.fastq"
+input_r2="amostra_R2.fastq"
+output_r1_paired="amostra_R1_paired.fastq"
+output_r2_paired="amostra_R2_paired.fastq"
+output_r1_unpaired="amostra_R1_unpaired.fastq"
+output_r2_unpaired="amostra_R2_unpaired.fastq"
+
+trimmomatic PE $input_r1 $input_r2 $output_r1_paired $output_r1_unpaired $output_r2_paired $output_r2_unpaired ILLUMINACLIP:adapters.fa:2:30:10 LEADING:3 TRAILING:3 SLIDINGWINDOW:4:15 MINLEN:36
+echo "Trimagem de leituras concluída!"
+
+# Etapa 2: Alinhamento com BWA
+genoma_ref="genoma_referencia.fasta"
+output_sam="alinhamento.sam"
+bwa mem $genoma_ref $output_r1_paired $output_r2_paired > $output_sam
+echo "Alinhamento concluído!"
+
+# Etapa 3: Conversão de SAM para BAM e Ordenação
+output_bam="alinhamento.bam"
+output_bam_sorted="alinhamento_ordenado.bam"
+samtools view -S -b $output_sam > $output_bam
+samtools sort $output_bam -o $output_bam_sorted
+echo "Conversão e ordenação concluídas!"
+```
