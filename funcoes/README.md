@@ -1,6 +1,6 @@
 # Funções e Modularidade em Shell Script (Achou que não dava pra fazer em shell, né?)
 ## Definindo e Utilizando Funções
-As funções em Shell Script são blocos de código reutilizáveis que permitem uma organização modular de scripts, facilitando a manutenção e a execução de tarefas repetitivas. Elas são especialmente úteis em bioinformática para automatizar procedimentos comuns, como processamento de sequências de DNA, conversão de formatos de arquivos, entre outros.
+<p align="justify">As funções em Shell Script são blocos de código reutilizáveis que permitem uma organização modular de scripts, facilitando a manutenção e a execução de tarefas repetitivas. Elas são especialmente úteis em bioinformática para automatizar procedimentos comuns, como processamento de sequências de DNA, conversão de formatos de arquivos, entre outros.</p>
 
 ### Vantagens das Funções:
 - Reutilização de código: O mesmo bloco de código pode ser reutilizado várias vezes sem duplicação.
@@ -36,7 +36,7 @@ soma 5 10
 ```
 
 ## Passagem de Parâmetros e Valores de Retorno
-As funções podem receber parâmetros e devolver valores. Para passar parâmetros, você os fornece após o nome da função quando ela é chamada, e dentro da função você pode acessá-los com as variáveis $1, $2, etc., que correspondem aos parâmetros na ordem que foram passados.
+<p align="justify">As funções podem receber parâmetros e devolver valores. Para passar parâmetros, você os fornece após o nome da função quando ela é chamada, e dentro da função você pode acessá-los com as variáveis $1, $2, etc., que correspondem aos parâmetros na ordem que foram passados.</p>
 
 Exemplo: Verificação de Arquivo
 ```
@@ -97,7 +97,7 @@ complemento_dna() {
 complemento_dna "ATGCGCATTAGC"
 ```
 
-O comando tr no Linux é utilizado para traduzir, substituir ou remover caracteres de uma entrada padrão (geralmente a saída de outro comando ou texto inserido diretamente). Ele lê do stdin (entrada padrão) e escreve para o stdout (saída padrão), sendo muito útil em operações de manipulação de texto.
+<p align="justify">O comando tr no Linux é utilizado para traduzir, substituir ou remover caracteres de uma entrada padrão (geralmente a saída de outro comando ou texto inserido diretamente). Ele lê do stdin (entrada padrão) e escreve para o stdout (saída padrão), sendo muito útil em operações de manipulação de texto.</p>
 
 Sintaxe básica:
 ```
