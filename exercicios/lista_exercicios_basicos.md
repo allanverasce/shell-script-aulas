@@ -6,4 +6,3 @@
 - Exercício 5: Extração de IDs de sequências. Escreva um script que extraia os IDs de todas as sequências de um arquivo FASTA e os salve em um arquivo de texto separado. Dica: Utilize grep e cut para manipular as linhas.
 - Exercício 6: Renomear arquivos de forma automática. Crie um script que renomeie todos os arquivos FASTA de uma pasta, adicionando um prefixo sample_ a cada nome de arquivo. Utilize um loop para processar os arquivos
 
-# Ainda em construção
