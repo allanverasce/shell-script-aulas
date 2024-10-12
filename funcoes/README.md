@@ -109,4 +109,4 @@ Opções comuns:
 - -d: Remove os caracteres que correspondem ao SET1.
 - -s: Substitui sequências repetidas de caracteres por um único caractere.
 - -c: Complementa o SET1, ou seja, aplica o comando a todos os caracteres que não estão em SET1.
-- 
+  
