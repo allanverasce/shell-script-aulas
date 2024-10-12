@@ -108,3 +108,22 @@ samtools view -S -b $output_sam > $output_bam
 samtools sort $output_bam -o $output_bam_sorted
 echo "Conversão e ordenação concluídas!"
 ```
+
+### Vamos explicar o passo-a-passo:
+1. Trimagem de Leituras com Trimmomatic:
+- trimmomatic PE: Este comando é usado para trimagem de leituras paired-end (R1 e R2).
+- ILLUMINACLIP: Remove adaptadores de sequências.
+- LEADING e TRAILING: Cortam bases de baixa qualidade no início e no fim das leituras.
+- SLIDINGWINDOW: Remove trechos com qualidade abaixo de um limite em uma janela deslizante.
+- MINLEN: Filtra leituras com comprimento abaixo de 36 bases.
+Ao final desta etapa, temos arquivos FASTQ pareados (_paired.fastq) e não pareados (_unpaired.fastq).
+
+2. Alinhamento com BWA:
+- bwa mem: Realiza o alinhamento de sequências pareadas contra o genoma de referência.
+- O resultado é salvo no formato SAM (alinhamento.sam).
+
+3.Conversão e Ordenação com SAMtools:
+- samtools view -S -b: Converte o arquivo SAM em BAM.
+- samtools sort: Ordena o arquivo BAM para facilitar as próximas análises, como chamadas de variantes.
+
+Este pipeline é altamente reutilizável em experimentos de RNA-Seq, por exemplo, e outras análises baseadas em sequenciamento de DNA ou RNA.
