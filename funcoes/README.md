@@ -62,8 +62,8 @@ verifica_arquivo "meu_arquivo.txt"
 - O valor retornado pode ser usado em verificações subsequentes.
 
 Exemplo: Função para Calcular o Conteúdo GC de Sequências de DNA
-O conteúdo GC de uma sequência de DNA é a porcentagem de bases guanina (G) e citosina (C) em relação ao total de bases. Vamos criar uma função que calcula isso.
-`Note que o código ficou mais limpo e simples`
+<p align="justify">O conteúdo GC de uma sequência de DNA é a porcentagem de bases guanina (G) e citosina (C) em relação ao total de bases. Vamos criar uma função que calcula isso.
+`Note que o código ficou mais limpo e simples` </p>
 ```
 #!/bin/bash
 
