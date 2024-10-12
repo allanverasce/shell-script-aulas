@@ -57,7 +57,7 @@ else
   exit 1
 fi
 ```
-### Vamos explicar !:
+### Vamos para explicação:
 Definindo Variáveis:
 - query: O arquivo de entrada que contém a sequência que será comparada.
 - database: O arquivo FASTA que contém as sequências que serão utilizadas para criar o banco de dados local.
@@ -79,7 +79,7 @@ O comando blastn é utilizado para executar o BLAST.
 O script verifica se o BLAST foi executado com sucesso. Se for, uma mensagem de sucesso é exibida; caso contrário, ele exibe uma mensagem de erro e interrompe o script.
 
 ### Exemplo 2: Integração com BWA e SAMtools
-<p align="justify">Nesta seção, vamos automatizar um pipeline para alinhamento de leituras FASTQ com o BWA e manipulação dos resultados com o SAMtools. Este exemplo é uma das etapas realizada em várias análises de dados dentre elas o RNA-Seq.</p>
+<p align="justify">Nesta seção, vamos automatizar um pipeline para alinhamento de leituras FASTQ com o BWA e manipulação dos resultados com o SAMtools. Este exemplo é uma das etapas realizada em várias análises de dados dentre elas o RNA-Seq. Aqui coloquei alguns parâmetros, caso suas leituras (FASTQ) sejam de outro sequenciador e não illumina, você deve ajustar os parâmetros de acordo com a sua plataforma, por exemplo, removendo ILLUMINACLIP:adapters </p>
 
 ```
 #!/bin/bash
