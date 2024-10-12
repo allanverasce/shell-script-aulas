@@ -20,7 +20,7 @@ comando_externo --opcoes entrada > saida
 - `>` saida: Redirecionamento da saída do programa para um arquivo ou outro comando.
 
 ### Exemplo 1: Integração com o BLAST
-O BLAST (Basic Local Alignment Search Tool) é uma das ferramentas mais utilizadas para comparar sequências de nucleotídeos ou proteínas. Aqui temos um exemplo simples do blast, caso queira adicionar mais parâmetros só fazer essa alteração diretamente na linha de comando do blast.
+O BLAST (Basic Local Alignment Search Tool) é uma das ferramentas mais utilizadas para comparar sequências de nucleotídeos ou proteínas. Aqui temos um exemplo simples do blast, caso queira adicionar mais parâmetros só fazer essa alteração diretamente na linha de comando do blast. `Não esquece de instalar o BLAST - sudo apt install ncbi-blast+`
 
 ```
 #!/bin/bash
