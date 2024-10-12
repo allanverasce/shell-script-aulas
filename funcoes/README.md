@@ -96,3 +96,17 @@ complemento_dna() {
 # Chamando a função com uma sequência de exemplo
 complemento_dna "ATGCGCATTAGC"
 ```
+
+O comando tr no Linux é utilizado para traduzir, substituir ou remover caracteres de uma entrada padrão (geralmente a saída de outro comando ou texto inserido diretamente). Ele lê do stdin (entrada padrão) e escreve para o stdout (saída padrão), sendo muito útil em operações de manipulação de texto.
+
+Sintaxe básica:
+```
+tr [opções] SET1 [SET2]
+```
+- SET1: Conjunto de caracteres que será transformado, removido ou substituído.
+- SET2: Conjunto de caracteres que substituirá os caracteres de SET1. Se não for especificado, o comando tr apenas removerá ou manipulará os caracteres definidos por SET1.
+Opções comuns:
+- -d: Remove os caracteres que correspondem ao SET1.
+- -s: Substitui sequências repetidas de caracteres por um único caractere.
+- -c: Complementa o SET1, ou seja, aplica o comando a todos os caracteres que não estão em SET1.
+- 
