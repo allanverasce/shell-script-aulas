@@ -1,4 +1,4 @@
-# Automação e Integração com Ferramentas Bioinformáticas
+# Automação e Integração com Ferramentas Bioinformáticas (Ainda em construção)
 Neste módulo, abordaremos como utilizar Shell Script para automatizar e integrar ferramentas bioinformáticas em pipelines de análise. A automação dessas tarefas é essencial para o processamento eficiente de grandes volumes de dados, especialmente em biologia computacional.
 
 ## 1. Execução de Programas Externos
