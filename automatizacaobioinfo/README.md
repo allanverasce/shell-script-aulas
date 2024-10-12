@@ -57,3 +57,23 @@ else
   exit 1
 fi
 ```
+### Vamos explicar !:
+Definindo Variáveis:
+- query: O arquivo de entrada que contém a sequência que será comparada.
+- database: O arquivo FASTA que contém as sequências que serão utilizadas para criar o banco de dados local.
+- blast_db: Nome do banco de dados BLAST que será criado.
+- output: Arquivo onde o resultado do BLAST será salvo.
+
+Etapa 1: Preparação do Banco de Dados:
+O comando makeblastdb é usado para preparar o banco de dados que será utilizado pelo BLAST.
+- -in: Especifica o arquivo de entrada que contém as sequências que formarão o banco de dados (neste caso, um arquivo FASTA).
+- -dbtype: Define o tipo de banco de dados, que pode ser nucl (nucleotídeos) ou prot (proteínas). Neste exemplo, estamos usando um banco de dados de nucleotídeos.
+- -out: Especifica o nome do banco de dados que será criado.
+O script verifica se o banco de dados foi criado com sucesso usando o código de saída $?. Se a criação falhar, o script exibe uma mensagem de erro e interrompe a execução com exit 1.
+
+Etapa 2: Execução do BLAST:
+O comando blastn é utilizado para executar o BLAST.
+- -query: Especifica o arquivo contendo a sequência de entrada que será comparada ao banco de dados.
+- -db: Define o banco de dados que foi preparado anteriormente com makeblastdb.
+- -out: Define o arquivo de saída que conterá o resultado do BLAST.
+O script verifica se o BLAST foi executado com sucesso. Se for, uma mensagem de sucesso é exibida; caso contrário, ele exibe uma mensagem de erro e interrompe o script.
