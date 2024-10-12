@@ -17,7 +17,7 @@ comando_externo --opcoes entrada > saida
 - comando_externo: O nome do programa ou comando a ser executado.
 - --opcoes: Parâmetros opcionais ou obrigatórios necessários pelo programa.
 - entrada: Arquivo ou dado que será processado.
-- > saida: Redirecionamento da saída do programa para um arquivo ou outro comando.
+- `>` saida: Redirecionamento da saída do programa para um arquivo ou outro comando.
 
 ### Exemplo 1: Integração com o BLAST
 O BLAST (Basic Local Alignment Search Tool) é uma das ferramentas mais utilizadas para comparar sequências de nucleotídeos ou proteínas. Aqui temos um exemplo simples do blast, caso queira adicionar mais parâmetros só fazer essa alteração diretamente na linha de comando do blast.
