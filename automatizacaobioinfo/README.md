@@ -14,3 +14,28 @@ A sintaxe básica para chamar um programa dentro de um Shell Script é simples. 
 #!/bin/bash
 comando_externo --opcoes entrada > saida
 ```
+- comando_externo: O nome do programa ou comando a ser executado.
+- --opcoes: Parâmetros opcionais ou obrigatórios necessários pelo programa.
+- entrada: Arquivo ou dado que será processado.
+- > saida: Redirecionamento da saída do programa para um arquivo ou outro comando.
+
+### Exemplo 1: Integração com o BLAST
+O BLAST (Basic Local Alignment Search Tool) é uma das ferramentas mais utilizadas para comparar sequências de nucleotídeos ou proteínas. Aqui temos um exemplo simples do blast, caso queira adicionar mais parâmetros só fazer essa alteração diretamente na linha de comando do blast.
+
+```
+#!/bin/bash
+# Definindo variáveis de entrada e saída
+query="sequencia_query.fasta"
+database="banco_dados_genoma"
+output="resultado_blast.txt"
+
+# Executando o BLAST
+blastn -query $query -db $database -out $output
+
+# Verificando se o BLAST foi executado com sucesso
+if [ $? -eq 0 ]; then
+  echo "BLAST concluído com sucesso! Resultado salvo em $output"
+else
+  echo "Erro na execução do BLAST"
+fi
+```
