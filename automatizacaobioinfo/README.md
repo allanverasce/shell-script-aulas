@@ -24,18 +24,36 @@ O BLAST (Basic Local Alignment Search Tool) é uma das ferramentas mais utilizad
 
 ```
 #!/bin/bash
+
 # Definindo variáveis de entrada e saída
 query="sequencia_query.fasta"
-database="banco_dados_genoma"
+database="banco_dados_genoma.fasta"
+blast_db="blastdb"
 output="resultado_blast.txt"
 
-# Executando o BLAST
-blastn -query $query -db $database -out $output
+# Etapa 1: Preparação do banco de dados local para o BLAST
+echo "Preparando o banco de dados BLAST..."
+
+makeblastdb -in $database -dbtype nucl -out $blast_db
+
+# Verificando se o banco de dados foi criado com sucesso
+if [ $? -eq 0 ]; then
+  echo "Banco de dados BLAST preparado com sucesso!"
+else
+  echo "Erro na criação do banco de dados BLAST"
+  exit 1
+fi
+
+# Etapa 2: Executando o BLAST
+echo "Executando o BLAST..."
+
+blastn -query $query -db $blast_db -out $output
 
 # Verificando se o BLAST foi executado com sucesso
 if [ $? -eq 0 ]; then
   echo "BLAST concluído com sucesso! Resultado salvo em $output"
 else
   echo "Erro na execução do BLAST"
+  exit 1
 fi
 ```
