@@ -10,13 +10,13 @@ O processo de montagem de genomas envolve várias etapas fundamentais, que permi
 
 ### Tarefa:
 
-Implemente as etapas 2 (Trimagem) e 3 (Filtro de Qualidade) usando o software **fastq-toolkit** em um **script shell**. O script deve:
+Implemente as etapas 2 (Trimagem) e 3 (Filtro de Qualidade) usando o software **fastx-toolkit** em um **script shell**. O script deve:
 
 - Realizar a **trimagem** das bases de baixa qualidade nas extremidades das sequências FASTQ.
 - Aplicar um **filtro de qualidade**, removendo as sequências cuja qualidade média esteja abaixo de um valor de corte.
 
 #### Requisitos:
-1. Utilize o software **fastq-toolkit** para realizar ambas as etapas.
+1. Utilize o software **fastx-toolkit** para realizar ambas as etapas.
 2. O script deve receber como parâmetros:
    - O arquivo FASTQ de entrada.
    - O valor de qualidade de corte.
@@ -25,3 +25,13 @@ Implemente as etapas 2 (Trimagem) e 3 (Filtro de Qualidade) usando o software **
 4. Inclua comentários no script explicando cada etapa.
 
 Obs: Já esta disponível no github o script que realiza a avaliação de qualidade.
+Instalação do fastx-toolkit -> conda install bioconda::fastx_toolkit
+
+Exemplos de execução dos Script fastx_toolkit
+
+```
+fastq_quality_trimmer -Q 33 -t 20 -l 100 -i Bifido-breve_NCTC11815_IonPGM.fastq -o Bifido-breve_NCTC11815_IonPGM_QV20.fastq
+fastq_quality_filter -Q 33 -q 20 -i Bifido-breve_NCTC11815_IonPGM_QV20.fastq -o Bifido-breve_NCTC11815_IonPGM_QV20_filter.fastq 
+```
+
+
