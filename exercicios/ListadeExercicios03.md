@@ -1,4 +1,4 @@
-### Exercício: Implementação das Etapas de Trimagem e Filtro de Qualidade no Processo de Montagem de Genoma
+### Exercício: Implementação das Etapas de Trimagem e Filtro de Qualidade para posterior Processo de Montagem de Genoma
 
 O processo de montagem de genomas envolve várias etapas fundamentais, que permitem a limpeza e organização das leituras brutas para garantir a qualidade dos dados. As principais etapas são:
 
