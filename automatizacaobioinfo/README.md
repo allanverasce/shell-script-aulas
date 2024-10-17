@@ -214,3 +214,47 @@ for fastq in $FASTQ_DIR/*.fastq.gz; do
     bowtie2 -x $BOWTIE2_INDEX -U $fastq -S $OUTPUT_DIR/$filename.sam
 done
 ```
+## SPAdes
+SPAdes é um montador de genomas que pode ser utilizado para montar genomas a partir de leituras curtas. O script a seguir monta múltiplos arquivos FASTQ de leitura emparelhada.
+```
+#!/bin/bash
+# Script para executar SPAdes em múltiplos arquivos FASTQ paired-end
+
+# Diretório com os arquivos FASTQ
+FASTQ_DIR="caminho_para_arquivos_fastq"
+OUTPUT_DIR="spades_results"
+
+# Criar diretório de saída
+mkdir -p $OUTPUT_DIR
+
+# Loop sobre os arquivos FASTQ emparelhados
+for sample in $(ls $FASTQ_DIR/*_R1.fastq.gz | sed 's/_R1.fastq.gz//'); do
+    sample_name=$(basename $sample)
+    spades.py -1 ${sample}_R1.fastq.gz -2 ${sample}_R2.fastq.gz -o $OUTPUT_DIR/$sample_name
+done
+```
+## Flye
+Flye é um montador de genomas projetado para lidar com long reads. Este script executa o Flye em múltiplos arquivos FASTQ, gerando montagens para cada arquivo encontrado em um diretório.
+```
+#!/bin/bash
+# Script para montar múltiplos arquivos FASTQ usando Flye
+
+# Diretório com os arquivos FASTQ long reads (PacBio ou Nanopore)
+FASTQ_DIR="caminho_para_arquivos_fastq"
+OUTPUT_DIR="flye_results"
+
+# Criar diretório de saída
+mkdir -p $OUTPUT_DIR
+
+# Loop sobre cada arquivo FASTQ no diretório
+for fastq in $FASTQ_DIR/*.fastq.gz; do
+    sample_name=$(basename $fastq .fastq.gz)
+    
+    # Criar um subdiretório para cada amostra
+    sample_output="$OUTPUT_DIR/$sample_name"
+    mkdir -p $sample_output
+    
+    # Executar Flye para montar a amostra
+    flye --nano-raw $fastq --out-dir $sample_output --genome-size 5m --threads 8
+done
+```
