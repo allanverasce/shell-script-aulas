@@ -127,3 +127,90 @@ Ao final desta etapa, temos arquivos FASTQ pareados (_paired.fastq) e não parea
 - samtools sort: Ordena o arquivo BAM para facilitar as próximas análises, como chamadas de variantes.
 
 Este pipeline é altamente reutilizável em experimentos de RNA-Seq, por exemplo, e outras análises baseadas em sequenciamento de DNA ou RNA.
+
+## Prokka
+O Prokka é uma ferramenta de anotação de genomas bacterianos e arqueanos. Este script automatiza o processo de anotação para múltiplos arquivos FASTA em um diretório.
+```
+#!/bin/bash
+# Script para anotar múltiplos arquivos FASTA usando Prokka
+
+# Diretório contendo os arquivos FASTA
+FASTA_DIR="caminho_para_arquivos_fasta"
+OUTPUT_DIR="prokka_results"
+
+# Criar diretório de saída
+mkdir -p $OUTPUT_DIR
+
+# Loop sobre todos os arquivos FASTA no diretório
+for fasta in $FASTA_DIR/*.fasta; do
+    filename=$(basename $fasta .fasta)
+    prokka --outdir $OUTPUT_DIR/$filename --prefix $filename $fasta
+done
+```
+Este script processa cada arquivo .fasta no diretório especificado e cria uma pasta de resultados de anotação separada para cada genoma.
+
+## BUSCO
+O BUSCO (Benchmarking Universal Single-Copy Orthologs) é uma ferramenta utilizada para avaliar a completude de conjuntos de genes essenciais conservados em genomas ou transcritos. Este script automatiza o processo de avaliação para múltiplos arquivos FASTA.
+```
+#!/bin/bash
+# Script para executar BUSCO em múltiplos arquivos FASTA
+
+# Diretório com os arquivos FASTA
+FASTA_DIR="caminho_para_arquivos_fasta"
+LINEAGE_SETS="bacteria_odb10"  # Exemplo para bactérias, ajuste conforme necessário
+OUTPUT_DIR="busco_results"
+
+# Criar diretório de saída
+mkdir -p $OUTPUT_DIR
+
+# Loop sobre todos os arquivos FASTA
+for fasta in $FASTA_DIR/*.fasta; do
+    filename=$(basename $fasta .fasta)
+    busco -i $fasta -l $LINEAGE_SETS -o $OUTPUT_DIR/$filename -m genome
+done
+```
+Esse script executa BUSCO em todos os arquivos .fasta dentro de um diretório, e salva os resultados em diretórios separados.
+
+## Salmon
+O Salmon é utilizado para quantificar a expressão de transcritos a partir de dados de RNA-seq. O script abaixo realiza quantificação de múltiplos arquivos FASTQ compactados (gzip).
+```
+#!/bin/bash
+# Script para quantificação de múltiplos arquivos FASTQ usando Salmon
+
+# Diretório com os arquivos FASTQ
+FASTQ_DIR="caminho_para_arquivos_fastq"
+SALMON_INDEX="salmon_index"
+OUTPUT_DIR="salmon_quant_results"
+
+# Criar diretório de saída
+mkdir -p $OUTPUT_DIR
+
+# Loop para quantificar cada arquivo FASTQ
+for fastq in $FASTQ_DIR/*.fastq.gz; do
+    filename=$(basename $fastq .fastq.gz)
+    salmon quant -i $SALMON_INDEX -l A -r $fastq -p 8 -o $OUTPUT_DIR/$filename
+done
+```
+Esse script processa cada arquivo FASTQ compactado no diretório e gera uma pasta de resultados para cada arquivo.
+
+## Bowtie2
+O Bowtie2 é um alinhador rápido e eficiente para dados de DNA e RNA. Este script automatiza o processo de alinhamento para múltiplos arquivos FASTQ.
+
+```
+#!/bin/bash
+# Script para alinhar múltiplos arquivos FASTQ usando Bowtie2
+
+# Diretório com os arquivos FASTQ
+FASTQ_DIR="caminho_para_arquivos_fastq"
+BOWTIE2_INDEX="bowtie2_index"
+OUTPUT_DIR="bowtie2_results"
+
+# Criar diretório de saída
+mkdir -p $OUTPUT_DIR
+
+# Loop para alinhar cada arquivo FASTQ
+for fastq in $FASTQ_DIR/*.fastq.gz; do
+    filename=$(basename $fastq .fastq.gz)
+    bowtie2 -x $BOWTIE2_INDEX -U $fastq -S $OUTPUT_DIR/$filename.sam
+done
+```
